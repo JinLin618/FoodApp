@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="100dp"
+    android:viewportWidth="200"
+    android:viewportHeight="100">
+
+    <!-- Pink sprinkle -->
+    <path
+        android:strokeColor="#FF6B81"
+        android:strokeWidth="4"
+        android:pathData="M20,20 L30,30" />
+
+    <!-- Yellow sprinkle -->
+    <path
+        android:strokeColor="#FFD93D"
+        android:strokeWidth="4"
+        android:pathData="M50,15 L60,25" />
+
+    <!-- Teal sprinkle -->
+    <path
+        android:strokeColor="#38B6FF"
+        android:strokeWidth="4"
+        android:pathData="M90,40 L100,50" />
+
+    <!-- Orange sprinkle -->
+    <path
+        android:strokeColor="#FFB347"
+        android:strokeWidth="4"
+        android:pathData="M130,10 L140,20" />
+
+    <!-- Green sprinkle -->
+    <path
+        android:strokeColor="#9AE66E"
+        android:strokeWidth="4"
+        android:pathData="M160,35 L170,45" />
+</vector>

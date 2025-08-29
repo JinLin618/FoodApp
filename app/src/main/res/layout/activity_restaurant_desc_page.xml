@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Restaurant Images (Vertical Scrollable) -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/restaurantImagePager"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp" />
+
+
+        <!-- Restaurant Name -->
+        <!-- Restaurant Name + Favourite Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/restaurantName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Golden Spoon Restaurant"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#212121" />
+
+            <ImageButton
+                android:id="@+id/btnFavourite"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_favorite"
+                android:contentDescription="Add to Favourite"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginStart="8dp"
+                app:tint="#FF0000" />
+
+
+        </LinearLayout>
+
+        <!-- Restaurant Rating -->
+        <TextView
+            android:id="@+id/restaurantRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐ 4.5 (1,200 reviews)"
+            android:textSize="16sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Restaurant Description -->
+        <TextView
+            android:id="@+id/restaurantDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Golden Spoon offers authentic Asian fusion dishes with a modern twist. Perfect for family gatherings, casual dining, or romantic dinners."
+            android:textSize="16sp"
+            android:textColor="#424242"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="20dp"
+            android:paddingHorizontal="8dp" />
+
+        <!-- Restaurant Details -->
+        <TextView
+            android:id="@+id/restaurantDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📍 Location: 123 Main Street, Miri\n⏰ Opening Hours: 10:00 AM – 10:00 PM\n📞 Contact: +60 123-456-789"
+            android:textSize="15sp"
+            android:textColor="#555555"
+            android:lineSpacingExtra="6dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Reserve / Call Button -->
+        <Button
+            android:id="@+id/btnReserve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reserve a Table"
+            android:backgroundTint="#FF5722"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btnCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Call Restaurant"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>
