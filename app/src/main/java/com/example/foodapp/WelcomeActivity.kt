@@ -10,8 +10,6 @@ class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_welcome2)
-
-
+        setContentView(R.layout.activity_welcome)
     }
 }

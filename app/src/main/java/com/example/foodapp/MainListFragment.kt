@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainScreenFragment : Fragment(R.layout.activity_main_screen) {
+class MainListFragment : Fragment(R.layout.activity_main_screen) {
 
     private lateinit var searchView: SearchView
     private lateinit var favouritesButton: LinearLayout

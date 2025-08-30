@@ -10,17 +10,12 @@ class RestaurantDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_restaurant_desc_page)
 
-        // Create a simple layout programmatically
-        val textView = TextView(this).apply {
-            text = "Restaurant Detail Screen"
-            textSize = 24f
-            setPadding(32, 32, 32, 32)
-        }
+        val titleView: TextView = findViewById(R.id.restaurantName)
+        val descView: TextView = findViewById(R.id.restaurantDescription)
+        val ratingView: TextView = findViewById(R.id.restaurantRating)
 
-        setContentView(textView)
-
-        // Get the restaurant data
 
         // Get the restaurant data
         val restaurant = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -30,8 +25,10 @@ class RestaurantDetailActivity : AppCompatActivity() {
             intent.getParcelableExtra<Restaurant>("restaurant")
         }
 
-        if (restaurant != null) {
-            textView.text = "Restaurant: ${restaurant.title}\n\nDescription: ${restaurant.description}"
+        if (restaurant != null){
+            titleView.text = restaurant.title
+            descView.text = restaurant.description
+            ratingView.text = restaurant.rating.toString()
         }
     }
 }

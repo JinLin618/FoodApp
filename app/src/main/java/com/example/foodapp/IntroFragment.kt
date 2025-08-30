@@ -14,7 +14,7 @@ class IntroFragment : Fragment(R.layout.activity_intro_screen) {
         btnStart.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
-                .replace(R.id.fragmentContainer, MainScreenFragment())
+                .replace(R.id.fragmentContainer, MainListFragment())
                 .commit()
         }
     }
