@@ -15,6 +15,7 @@ class IntroFragment : Fragment(R.layout.activity_intro_screen) {
             parentFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
                 .replace(R.id.fragmentContainer, MainListFragment())
+                .addToBackStack(null)
                 .commit()
         }
     }

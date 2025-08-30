@@ -13,7 +13,7 @@ data class Restaurant(
     val mealType: String,
     val imageGallery: List<Int>,
     val address: String,
-    val mapsUrl: String,
+    val mapsUrl: String, //Integrate it with google Maps, if got extra time
     val hours: Map<String, String>,
     val rating: Float = 4.0f,
     val priceLevel: Int = 2
