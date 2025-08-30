@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF7ED"
+    android:padding="16dp">
+
+    <!-- Left side - Logo -->
+    <FrameLayout
+        android:id="@+id/logoContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/logo_circle_bg"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rightContent"
+        app:layout_constraintWidth_percent="0.4">
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img" />
+    </FrameLayout>
+
+    <!-- Right side - Content -->
+    <LinearLayout
+        android:id="@+id/rightContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/logoContainer"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Makan Miri"
+            android:textColor="#D1495B"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Local Eats &amp; Café Guide"
+            android:textColor="#624D3F"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/poppins_regular" />
+
+        <!-- Tagline -->
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your tummy's new BFF"
+            android:textColor="#624D3F"
+            android:textSize="12sp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/merriweather_italic" />
+
+        <!-- Start Button -->
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's Makan!"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:backgroundTint="#D1495B"
+            android:background="@drawable/rounded_button_red"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Footer version -->
+        <TextView
+            android:id="@+id/versionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v1.0  ©2025"
+            android:textColor="#B9AAA6"
+            android:textSize="10sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
