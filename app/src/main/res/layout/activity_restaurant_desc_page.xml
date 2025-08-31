@@ -1,93 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA"
-    android:padding="16dp">
+    android:background="#FAFAFA">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:padding="16dp">
 
-        <!-- Restaurant Images (Vertical Scrollable) -->
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/restaurantImagePager"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="230dp"
-            android:orientation="vertical"
-            android:layout_marginBottom="16dp" />
+            android:layout_height="250dp"
+            app:cardCornerRadius="16dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Restaurant Images (Horizontal Scrollable) -->
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/restaurantImagePager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToOutline="true"/>
+
+                <!-- Back button (top left) -->
+                <ImageButton
+                    android:id="@+id/backBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/round_button"
+                    android:contentDescription="Back"
+                    app:srcCompat="@drawable/round_arrow_back_24"
+                    android:scaleType="centerInside"
+                    android:padding="6dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"/>
+
+                <!-- Favourite button (top right) -->
+                <ImageButton
+                    android:id="@+id/favouritesBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/round_button"
+                    android:contentDescription="Favourite"
+                    app:srcCompat="@drawable/ic_favorite"
+                    app:tint="#FF0000"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"/>
+
+            </RelativeLayout>
 
 
-        <!-- Restaurant Name -->
-        <!-- Restaurant Name + Favourite Button -->
+        </com.google.android.material.card.MaterialCardView>
+
         <LinearLayout
+            android:id="@+id/restaurantNameOuterContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:layout_marginBottom="8dp">
 
-            <TextView
-                android:id="@+id/restaurantName"
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Golden Spoon Restaurant"
-                android:textSize="26sp"
-                android:textStyle="bold"
-                android:textColor="#212121" />
+                android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/btnFavourite"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_favorite"
-                android:contentDescription="Add to Favourite"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:layout_marginStart="8dp"
-                app:tint="#FF0000" />
+                <!-- Restaurant Name -->
+                <TextView
+                    android:id="@+id/restaurantName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Golden Spoon Restaurant"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121" />
 
-
+                <!-- Meal Type -->
+                <TextView
+                    android:id="@+id/mealType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Lunch, Dinner"
+                    android:textColor="#403F3F"
+                    android:textSize="15sp" />
+            </LinearLayout>
         </LinearLayout>
 
-        <!-- Restaurant Rating -->
-        <TextView
-            android:id="@+id/restaurantRating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="⭐ 4.5 (1,200 reviews)"
-            android:textSize="16sp"
-            android:textColor="#FF9800"
-            android:layout_marginBottom="12dp" />
 
-        <!-- Restaurant Description -->
-        <TextView
-            android:id="@+id/restaurantDescription"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Golden Spoon offers authentic Asian fusion dishes with a modern twist. Perfect for family gatherings, casual dining, or romantic dinners."
-            android:textSize="16sp"
-            android:textColor="#424242"
-            android:gravity="center"
-            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical"
+                android:weightSum="2">
+
+                <!-- Rating section -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <RatingBar
+                        android:id="@+id/restaurantRatingBar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:progressTint="#E0FFEA0A"
+                        android:rating="4.5"
+                        android:secondaryProgressTint="#787777"
+                        android:stepSize="0.5"
+                        app:progressBackgroundTint="#E0E0E0"
+                        app:progressTint="#FFC107"
+                        app:secondaryProgressTint="#FFC107" />
+
+                    <TextView
+                        android:id="@+id/ratingValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="4.5 (1,200)"
+                        android:textColor="#424242"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <!-- Price section -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="end|center_vertical">
+
+                    <TextView
+                        android:id="@+id/restaurantPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RM20–RM40"
+                        android:textColor="#4CAF50"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/priceLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="($$)"
+                        android:textSize="15sp"
+                        android:textColor="#4CAF50"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#F5F5F5">
+
+            <!-- Restaurant Description -->
+            <TextView
+                android:id="@+id/restaurantDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="Golden Spoon offers authentic Asian fusion dishes with a modern twist. Perfect for family gatherings, casual dining, or romantic dinners."
+                android:textAlignment="viewStart"
+                android:textColor="#1D1D1D"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
             android:layout_marginBottom="20dp"
-            android:paddingHorizontal="8dp" />
+            android:backgroundTintMode="src_over">
 
-        <!-- Restaurant Details -->
-        <TextView
-            android:id="@+id/restaurantDetails"
+            <!-- About Header -->
+            <TextView
+                android:id="@+id/aboutHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="About"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Restaurant Location -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="📍 Location"
+                android:textColor="#7A7A7A"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/restaurantLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:lineSpacingExtra="6dp"
+                android:text="123 Main Street, Miri"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Restaurant Contact -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="📞 Contact"
+                android:textColor="#7A7A7A"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/restaurantContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:lineSpacingExtra="6dp"
+                android:text="‪+60 123-456-789‬"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Restaurant Open Hours -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="⏰ Opening Hours"
+                android:textColor="#7A7A7A"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/restaurantOpenHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:lineSpacingExtra="6dp"
+                android:text="10:00 AM – 10:00 PM"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <!-- View on Map
+        <Button
+            android:id="@+id/btnViewMap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="📍 Location: 123 Main Street, Miri\n⏰ Opening Hours: 10:00 AM – 10:00 PM\n📞 Contact: +60 123-456-789"
-            android:textSize="15sp"
-            android:textColor="#555555"
-            android:lineSpacingExtra="6dp"
-            android:layout_marginBottom="24dp" />
+            android:text="View on Map"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp" /> -->
 
-        <!-- Reserve / Call Button -->
+        <!-- Reserve / Call Button
         <Button
             android:id="@+id/btnReserve"
             android:layout_width="match_parent"
@@ -107,7 +330,7 @@
             android:backgroundTint="#4CAF50"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:padding="12dp" />
+            android:padding="12dp" /> -->
 
     </LinearLayout>
 </ScrollView>
