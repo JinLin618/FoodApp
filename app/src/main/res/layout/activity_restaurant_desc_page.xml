@@ -16,7 +16,7 @@
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="300dp"
             app:cardCornerRadius="16dp"
             app:cardUseCompatPadding="true"
             app:cardElevation="4dp">
@@ -30,7 +30,23 @@
                     android:id="@+id/restaurantImagePager"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:clipToOutline="true"/>
+                    android:clipToOutline="true"
+                    android:orientation="horizontal"/>
+
+                <!-- Dots indicator for the ViewPager2 -->
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/imageDots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/dot_selector_background"
+                    android:clipToPadding="false"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabSelectedTextColor="#000000"
+                    app:tabTextColor="#BDBDBD"
+                    app:tabBackground="@null" />
 
                 <!-- Back button (top left) -->
                 <ImageButton
@@ -127,7 +143,7 @@
                     android:gravity="center_vertical">
 
                     <RatingBar
-                        android:id="@+id/restaurantRatingBar"
+                        android:id="@+id/restaurantRating"
                         style="?android:attr/ratingBarStyleSmall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -136,19 +152,26 @@
                         android:progressTint="#E0FFEA0A"
                         android:rating="4.5"
                         android:secondaryProgressTint="#787777"
-                        android:stepSize="0.5"
-                        app:progressBackgroundTint="#E0E0E0"
-                        app:progressTint="#FFC107"
-                        app:secondaryProgressTint="#FFC107" />
+                        android:stepSize="0.5"/>
 
                     <TextView
                         android:id="@+id/ratingValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:text="4.5 (1,200)"
+                        android:text="4.5"
                         android:textColor="#424242"
                         android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/reviewCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="(1,200)"
+                        android:textColor="#424242"
+                        android:textSize="14sp"/>
+
                 </LinearLayout>
 
                 <!-- Price section -->
@@ -172,7 +195,7 @@
                         android:id="@+id/priceLevel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
+                        android:layout_marginStart="5dp"
                         android:text="($$)"
                         android:textSize="15sp"
                         android:textColor="#4CAF50"/>
@@ -195,12 +218,13 @@
                 android:id="@+id/restaurantDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#DEDEDE"
+                android:lineSpacingExtra="4dp"
                 android:padding="12dp"
                 android:text="Golden Spoon offers authentic Asian fusion dishes with a modern twist. Perfect for family gatherings, casual dining, or romantic dinners."
                 android:textAlignment="viewStart"
                 android:textColor="#1D1D1D"
-                android:textSize="16sp"
-                android:lineSpacingExtra="4dp" />
+                android:textSize="16sp" />
         </com.google.android.material.card.MaterialCardView>
 
 

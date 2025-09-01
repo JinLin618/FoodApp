@@ -16,5 +16,6 @@ data class Restaurant(
     val mapsUrl: String, //Integrate it with google Maps, if got extra time
     val hours: Map<String, String>,
     val rating: Float = 4.0f,
+    val reviewCount : Int = 1000,
     val priceLevel: Int = 2
 ) : Parcelable

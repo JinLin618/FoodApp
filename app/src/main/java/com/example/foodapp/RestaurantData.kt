@@ -30,6 +30,7 @@ object RestaurantData {
                     "Saturday" to "10 am–10 pm",
                     "Sunday" to "10 am–10 pm"),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
 
             ),
@@ -62,6 +63,7 @@ object RestaurantData {
                     "Sunday" to "1015  am - 6 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -78,7 +80,7 @@ object RestaurantData {
                 categories = listOf("Dessert"),
                 price = "RM20-RM40",
                 mealType = "Lunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                imageGallery = listOf(R.drawable.thelittlogo, R.drawable.thelitt1, R.drawable.thelitt2, R.drawable.thelitt3, R.drawable.thelitt4, R.drawable.thelitt5), // insert pictures later
                 address = "Ground Floor, lot 2070, Jalan Brighton, Phase 1, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/hUobAf1pNpU7BzCRA",
                 hours =mapOf(
@@ -91,6 +93,7 @@ object RestaurantData {
                     "Sunday" to "1030 am - 1030 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -122,6 +125,7 @@ object RestaurantData {
                     "Sunday" to "0830 am - 5 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -152,6 +156,7 @@ object RestaurantData {
                     "Sunday" to "1030 am - 1030 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -186,6 +191,7 @@ object RestaurantData {
                     "Sunday" to "12 pm - 10 pm "
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -216,6 +222,7 @@ object RestaurantData {
                     "Sunday" to "10 am - 6 pm  "
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -247,6 +254,7 @@ object RestaurantData {
                     "Sunday" to "Closed"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -278,6 +286,7 @@ object RestaurantData {
                     "Sunday" to "11 am - 9 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -309,6 +318,7 @@ object RestaurantData {
                     "Sunday" to "11 am - 9 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -337,6 +347,7 @@ object RestaurantData {
                     "Sunday" to "9 am - 9 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -367,6 +378,7 @@ object RestaurantData {
                     "Sunday" to "6 am - 2 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -395,6 +407,7 @@ object RestaurantData {
                     "Sunday" to "6 am - 3 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -424,6 +437,7 @@ object RestaurantData {
                     "Sunday" to "Closed"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -454,6 +468,7 @@ object RestaurantData {
                     "Sunday" to "6 am - 130 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -483,6 +498,7 @@ object RestaurantData {
                     "Sunday" to "7 am - 430 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -513,6 +529,7 @@ object RestaurantData {
                     "Sunday" to "10 am - 9 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -543,6 +560,7 @@ object RestaurantData {
                     "Sunday" to "630 am - 10 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -572,6 +590,7 @@ object RestaurantData {
                     "Sunday" to "5 pm - 9pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -603,6 +622,7 @@ object RestaurantData {
                     "Sunday" to "1030 am - 9 pm",
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -632,6 +652,7 @@ object RestaurantData {
                     "Sunday" to "5 pm - 10 pm",
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -662,6 +683,7 @@ object RestaurantData {
                     "Sunday" to "11 am - 10 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -694,6 +716,7 @@ object RestaurantData {
                     "Sunday" to "11 am - 11 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             ),
 
@@ -724,6 +747,7 @@ object RestaurantData {
                     "Sunday" to "9 am - 10 pm"
                 ),
                 rating = 4.0f,        // Added this line
+                reviewCount = 1000,
                 priceLevel= 2
             )
         )
