@@ -25,6 +25,7 @@ class RestaurantDetailActivity : AppCompatActivity() {
         val locationView : TextView = findViewById(R.id.restaurantLocation)
         val contactView : TextView = findViewById(R.id.restaurantContact)
         val hoursView: TextView = findViewById(R.id.restaurantOpenHours)
+        val favBtn: ImageButton = findViewById(R.id.favouritesBtn)
 
         findViewById<ImageButton>(R.id.backBtn).setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
@@ -72,6 +73,15 @@ class RestaurantDetailActivity : AppCompatActivity() {
             })
 
             dots.getTabAt(pager.currentItem)?.customView?.isSelected = true
+
+            // Favourite button state and interaction
+            val isFav = RestaurantStateStore.favoriteRestaurants.value?.contains(restaurant.title) == true
+            favBtn.setImageResource(if (isFav) R.drawable.heart else R.drawable.empty_favourite)
+            favBtn.setOnClickListener {
+                RestaurantStateStore.toggleFavorite(restaurant.title)
+                val newIsFav = RestaurantStateStore.favoriteRestaurants.value?.contains(restaurant.title) == true
+                favBtn.setImageResource(if (newIsFav) R.drawable.heart else R.drawable.empty_favourite)
+            }
         }
     }
     private fun formatHours(hours: Map<String, String>): String {

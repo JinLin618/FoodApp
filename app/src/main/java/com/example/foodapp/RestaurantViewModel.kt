@@ -45,45 +45,50 @@ class RestaurantViewModel : ViewModel() {
     val showFavoritesOnly: LiveData<Boolean> = _showFavoritesOnly
 
     init {
-        // Initialize with default values
-        _searchQuery.value = ""
-        _selectedCategory.value = "All"
-        _locationFilter.value = "All"
-        _priceFilter.value = "All"
-        _ratingFilter.value = "All"
-        _favoriteRestaurants.value = emptySet()
-        _showFavoritesOnly.value = false
+        _searchQuery.value = RestaurantStateStore.searchQuery.value ?: ""
+        _selectedCategory.value = RestaurantStateStore.selectedCategory.value ?: "All"
+        _locationFilter.value = RestaurantStateStore.locationFilter.value ?: "All"
+        _priceFilter.value = RestaurantStateStore.priceFilter.value ?: "All"
+        _ratingFilter.value = RestaurantStateStore.ratingFilter.value ?: "All"
+        _favoriteRestaurants.value = RestaurantStateStore.favoriteRestaurants.value ?: emptySet()
+        _showFavoritesOnly.value = RestaurantStateStore.showFavoritesOnly.value ?: false
         _filteredRestaurants.value = allRestaurants
     }
 
     fun updateSearchQuery(query: String) {
         _searchQuery.value = query
+        RestaurantStateStore.setSearchQuery(query)
         filterRestaurants()
     }
 
     fun updateSelectedCategory(category: String) {
         _selectedCategory.value = category
+        RestaurantStateStore.setSelectedCategory(category)
         filterRestaurants()
     }
 
     fun updateLocationFilter(location: String) {
         _locationFilter.value = location
+        RestaurantStateStore.setLocationFilter(location)
         filterRestaurants()
     }
 
     fun updatePriceFilter(price: String) {
         _priceFilter.value = price
+        RestaurantStateStore.setPriceFilter(price)
         filterRestaurants()
     }
 
     fun updateRatingFilter(rating: String) {
         _ratingFilter.value = rating
+        RestaurantStateStore.setRatingFilter(rating)
         filterRestaurants()
     }
 
     fun showFavoritesOnly() {
         val currentValue = _showFavoritesOnly.value ?: false
         _showFavoritesOnly.value = !currentValue
+        RestaurantStateStore.toggleFavoritesOnly()
         filterRestaurants()
     }
 
@@ -95,6 +100,7 @@ class RestaurantViewModel : ViewModel() {
             currentFavorites.add(restaurantTitle)
         }
         _favoriteRestaurants.value = currentFavorites
+        RestaurantStateStore.toggleFavorite(restaurantTitle)
         filterRestaurants()
     }
 

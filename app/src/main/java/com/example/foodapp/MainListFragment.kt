@@ -43,7 +43,7 @@ class MainListFragment : Fragment(R.layout.activity_main_screen) {
         ratingFilterCard = view.findViewById(R.id.ratingFilterCard)
         restaurantRecyclerView = view.findViewById(R.id.restaurantRecyclerView)
 
-        viewModel = ViewModelProvider(this)[RestaurantViewModel::class.java]
+        viewModel = ViewModelProvider(requireActivity())[RestaurantViewModel::class.java]
 
         restaurantAdapter = RestaurantAdapter(
             restaurants = emptyList(),
@@ -65,6 +65,12 @@ class MainListFragment : Fragment(R.layout.activity_main_screen) {
         setupSearchView()
         setupFilterButtons(view)
         observeViewModel(view)
+
+        // Restore UI texts from state on first creation
+        view.findViewById<TextView>(R.id.genreFilterText).text = RestaurantStateStore.selectedCategory.value ?: "Genre"
+        view.findViewById<TextView>(R.id.locationFilterText).text = RestaurantStateStore.locationFilter.value ?: "Location"
+        view.findViewById<TextView>(R.id.priceFilterText).text = RestaurantStateStore.priceFilter.value ?: "Price Range"
+        view.findViewById<TextView>(R.id.ratingFilterText).text = RestaurantStateStore.ratingFilter.value ?: "Rating"
     }
 
     private fun setupSearchView() {
@@ -78,6 +84,9 @@ class MainListFragment : Fragment(R.layout.activity_main_screen) {
                 return true
             }
         })
+
+        // restore query text for UX on rotation
+        searchView.setQuery(RestaurantStateStore.searchQuery.value ?: "", false)
     }
 
     private fun setupFilterButtons(root: View) {
