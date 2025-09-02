@@ -3,6 +3,7 @@ package com.example.foodapp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
 
 class RestaurantViewModel : ViewModel() {
 
@@ -44,6 +45,11 @@ class RestaurantViewModel : ViewModel() {
     private val _showFavoritesOnly = MutableLiveData<Boolean>()
     val showFavoritesOnly: LiveData<Boolean> = _showFavoritesOnly
 
+    private val stateFavoriteObserver = Observer<Set<String>> { favorites: Set<String> ->
+        _favoriteRestaurants.value = favorites
+        filterRestaurants()
+    }
+
     init {
         _searchQuery.value = RestaurantStateStore.searchQuery.value ?: ""
         _selectedCategory.value = RestaurantStateStore.selectedCategory.value ?: "All"
@@ -53,6 +59,8 @@ class RestaurantViewModel : ViewModel() {
         _favoriteRestaurants.value = RestaurantStateStore.favoriteRestaurants.value ?: emptySet()
         _showFavoritesOnly.value = RestaurantStateStore.showFavoritesOnly.value ?: false
         _filteredRestaurants.value = allRestaurants
+
+        RestaurantStateStore.favoriteRestaurants.observeForever(stateFavoriteObserver)
     }
 
     fun updateSearchQuery(query: String) {
@@ -152,5 +160,10 @@ class RestaurantViewModel : ViewModel() {
         }
 
         _filteredRestaurants.value = filtered
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        RestaurantStateStore.favoriteRestaurants.removeObserver(stateFavoriteObserver)
     }
 }
