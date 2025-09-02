@@ -17,8 +17,8 @@ object RestaurantData {
                 phoneNumber = "‪+6016-961-0151‬",
                 categories = listOf("Dessert"),
                 price = "RM20-RM40",
-                mealType = "Lunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                mealType = listOf("Lunch"),
+                imageGallery = listOf(R.drawable.coffeejoa_pic5, R.drawable.coffeejoa_pic1, R.drawable.coffeejoa_pic2,R.drawable.coffeejoa_pic3, R.drawable.coffeejoa_pic4), // insert pictures later
                 address = "Coffee Joa, Lot 1996, Ground Floor, Marina Square 2, Marina Parkcity, Miri, Sarawak, Malaysia",
                 mapsUrl = "https://maps.app.goo.gl/5MGkK1JkgsH9b2qc8",
                 hours = mapOf(
@@ -29,8 +29,8 @@ object RestaurantData {
                     "Friday" to "10 am–10 pm",
                     "Saturday" to "10 am–10 pm",
                     "Sunday" to "10 am–10 pm"),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
+                rating = 4.6f,        // Added this line
+                reviewCount = 92,
                 priceLevel= 2
 
             ),
@@ -48,23 +48,23 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "‪+6010-982 6537‬",
                 categories = listOf("Dessert"),
-                price = "RM20-RM40",
-                mealType = "Lunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                price = "RM1-RM20",
+                mealType = listOf("Lunch"),
+                imageGallery = listOf(R.drawable.inthemood_pic1, R.drawable.inthemood_pic2, R.drawable.inthemood_pic3, R.drawable.inthemood_pic4, R.drawable.inthemood_pic5), // insert pictures later
                 address = "Ground Floor, Lot 633, Jalan North Yu Seng, Utara, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/zJeV7oDYNrYCKc527",
                 hours =mapOf(
-                    "Monday" to "1015 am - 6 pm",
-                    "Tuesday" to "1015 am - 6 pm",
-                    "Wednesday" to "1015 am - 6 pm",
-                    "Thursday" to "1015 am - 6 pm",
-                    "Friday" to "1015 am - 6 pm",
-                    "Saturday" to "1015 am - 6 pm",
-                    "Sunday" to "1015  am - 6 pm"
+                    "Monday" to "10:15 am - 6 pm",
+                    "Tuesday" to "10:15 am - 6 pm",
+                    "Wednesday" to "10:15 am - 6 pm",
+                    "Thursday" to "10:15 am - 6 pm",
+                    "Friday" to "10:15 am - 6 pm",
+                    "Saturday" to "10:15 am - 6 pm",
+                    "Sunday" to "10:15  am - 6 pm"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                rating = 4.7f,        // Added this line
+                reviewCount = 114,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -78,23 +78,23 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "‪+6011-3359 5257‬",
                 categories = listOf("Dessert"),
-                price = "RM20-RM40",
-                mealType = "Lunch",
+                price = "RM1-RM20",
+                mealType = listOf("Lunch"),
                 imageGallery = listOf(R.drawable.thelittlogo, R.drawable.thelitt1, R.drawable.thelitt2, R.drawable.thelitt3, R.drawable.thelitt4, R.drawable.thelitt5), // insert pictures later
-                address = "Ground Floor, lot 2070, Jalan Brighton, Phase 1, 98000 Miri, Sarawak",
+                address = "Ground Floor, lot 2070, Jalan Brighton, Marina Phase 1, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/hUobAf1pNpU7BzCRA",
                 hours =mapOf(
-                    "Monday" to "1030 am - 1030 pm",
-                    "Tuesday" to "1030 am - 1030 pm",
-                    "Wednesday" to "1030 am - 1030 pm",
-                    "Thursday" to "1030 am - 1030 pm",
-                    "Friday" to "1030 am - 1030 pm",
-                    "Saturday" to "1030 am - 1030 pm",
-                    "Sunday" to "1030 am - 1030 pm"
+                    "Monday" to "10:30 am - 10:30 pm",
+                    "Tuesday" to "10:30 am - 10:30 pm",
+                    "Wednesday" to "10:30 am - 10:30 pm",
+                    "Thursday" to "10:30 am - 10:30 pm",
+                    "Friday" to "10:30 am - 10:30 pm",
+                    "Saturday" to "10:30 am - 10:30 pm",
+                    "Sunday" to "10:30 am - 10:30 pm"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                rating = 4.5f,        // Added this line
+                reviewCount = 74,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -109,23 +109,23 @@ object RestaurantData {
                      using oat milk. 
                 """.trimIndent(),
                 phoneNumber = "+6011-2685 6698",
-                categories = listOf("Dessert"),
+                categories = listOf("Dessert", "Western"),
                 price = "RM20-RM40",
-                mealType = "Lunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                mealType = listOf("Breakfast", "Lunch"),
+                imageGallery = listOf(R.drawable.unitedcoffee_pic1, R.drawable.unitedcoffee_pic2,R.drawable.unitedcoffee_pic3,R.drawable.unitedcoffee_pic4,R.drawable.unitedcoffee_pic5), // insert pictures later
                 address = " Lot 1862, Marina Phase 2, Miri City, Marina Parkcity, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/KC6pZ1E9BxV1oA6eA",
                 hours =mapOf(
-                    "Monday" to "0830 am - 5 pm",
-                    "Tuesday" to "0830 am - 5 pm",
-                    "Wednesday" to "0830 am - 5 pm",
-                    "Thursday" to "0830 am - 5 pm",
-                    "Friday" to "0830 am - 10 pm",
-                    "Saturday" to "0830 am - 10 pm",
-                    "Sunday" to "0830 am - 5 pm"
+                    "Monday" to "8:30 am - 5 pm",
+                    "Tuesday" to "8:30 am - 5 pm",
+                    "Wednesday" to "8:30 am - 5 pm",
+                    "Thursday" to "8:30 am - 5 pm",
+                    "Friday" to "8:30 am - 10 pm",
+                    "Saturday" to "08:30 am - 10 pm",
+                    "Sunday" to "8:30 am - 5 pm"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
+                rating = 4.3f,        // Added this line
+                reviewCount = 31,
                 priceLevel= 2
             ),
 
@@ -139,24 +139,24 @@ object RestaurantData {
                     smooth textures, with a focus on quality ingredients and unique flavor 
                     combinations
                 """.trimIndent(),
-                phoneNumber = "+6012-2206160", // phone havent change
+                phoneNumber = "+6012-2206160",
                 categories = listOf("Dessert"),
                 price = "RM20-RM40",
-                mealType = "Lunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                mealType = listOf("Lunch"),
+                imageGallery = listOf(R.drawable.cremestudio_pic4, R.drawable.cremestudio_pic1,R.drawable.cremestudio_pic2,R.drawable.cremestudio_pic3,R.drawable.cremestudio_pic5), // insert pictures later
                 address = "Marina Phase 2, Miri.",
                 mapsUrl = "https://share.google/OrN3GuLKGnPihqNX8",
                 hours =mapOf(
-                    "Monday" to "1030 am - 1030 pm",
-                    "Tuesday" to "1030 am - 1030 pm",
-                    "Wednesday" to "1030 am - 1030 pm",
-                    "Thursday" to "1030 am - 1030 pm",
-                    "Friday" to "1030 am - 1030 pm",
-                    "Saturday" to "1030 am - 1030 pm",
-                    "Sunday" to "1030 am - 1030 pm"
+                    "Monday" to "10:30 am - 10:30 pm",
+                    "Tuesday" to "10:30 am - 10:30 pm",
+                    "Wednesday" to "10:30 am - 10:30 pm",
+                    "Thursday" to "10:30 am - 10:30 pm",
+                    "Friday" to "10:30 am - 10:30 pm",
+                    "Saturday" to "10:30 am - 10:30 pm",
+                    "Sunday" to "10:30 am - 10:30 pm"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
+                rating = 4.3f,        // Added this line
+                reviewCount = 6,
                 priceLevel= 2
             ),
 
@@ -174,9 +174,9 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "+6011-6140 7910",
                 categories = listOf("Dessert"),
-                price = "RM20-RM40",
-                mealType = "Lunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                price = "RM1-RM20",
+                mealType = listOf("Lunch"),
+                imageGallery = listOf(R.drawable.sipslowbar_pic4, R.drawable.sipslowbar_pic3, R.drawable.sipslowbar_pic2,R.drawable.sipslowbar_pic1), // insert pictures later
                 address = "Lot 577, 1st Floor (above QQ Beijing Roasted Duck), Pelita Commercial Centre, " +
                         "Miri\n" +
                         "(Opposite 5050 Café)",
@@ -190,9 +190,9 @@ object RestaurantData {
                     "Saturday" to "12 pm - 10 pm ",
                     "Sunday" to "12 pm - 10 pm "
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                rating = 5.0f,        // Added this line
+                reviewCount = 4,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -208,8 +208,8 @@ object RestaurantData {
                 phoneNumber = "+6014-364 0822",
                 categories = listOf("Dessert"),
                 price = "RM20-RM40",
-                mealType = "Lunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                mealType = listOf("Lunch"),
+                imageGallery = listOf(R.drawable.bonbon_pic4, R.drawable.bonbon_pic1, R.drawable.bonbon_pic2,R.drawable.bonbon_pic3, R.drawable.bonbon_pic5), // insert pictures later
                 address = " 596, Jalan Pelita 2, Pelita Commercial Centre, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/AWKnk8wyU9Jx3P886",
                 hours =mapOf(
@@ -221,8 +221,8 @@ object RestaurantData {
                     "Saturday" to "10 am - 6 pm  ",
                     "Sunday" to "10 am - 6 pm  "
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
+                rating = 3.9f,        // Added this line
+                reviewCount = 158,
                 priceLevel= 2
             ),
 
@@ -239,9 +239,9 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "+6011-6562 6166",
                 categories = listOf("Dessert"),
-                price = "RM20-RM40",
-                mealType = "Lunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                price = "RM1-RM20",
+                mealType = listOf("Lunch"),
+                imageGallery = listOf(R.drawable.bluecottagecoffee_pic1, R.drawable.bluecottagecoffee_pic2, R.drawable.bluecottagecoffee_pic3, R.drawable.bluecottagecoffee_pic4), // insert pictures later
                 address = "  No.6, Ground Floor & M Floor, Lot 2357, Jalan Krokop 2, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/eeWDa8Vo9fGXHojNA",
                 hours =mapOf(
@@ -253,9 +253,9 @@ object RestaurantData {
                     "Saturday" to "8 am - 5 pm",
                     "Sunday" to "Closed"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                rating = 4.6f,        // Added this line
+                reviewCount = 83,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -270,9 +270,9 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "+6010-882 4162",
                 categories = listOf("Dessert"),
-                price = "RM10-rm20",
-                mealType = "Lunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                price = "RM1-rm20",
+                mealType = listOf("Lunch","Dinner"),
+                imageGallery = listOf(R.drawable.qqdessert_pic1, R.drawable.qqdessert_pic2, R.drawable.qqdessert_pic3, R.drawable.qqdessert_pic4, R.drawable.qqdessert_pic5), // insert pictures later
                 address = " Lot 10663 (Ground Floor) Pujut Commercial Centre Jalan Pujut 7,Sungai " +
                         "Merapa, Lutong, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/1gDXEHVpdF9XEyrL8",
@@ -285,41 +285,9 @@ object RestaurantData {
                     "Saturday" to "11 am - 9 pm",
                     "Sunday" to "11 am - 9 pm"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
-            ),
-
-            Restaurant(
-                title = "QQ Dessert",
-                description = """
-                    QQ Dessert in Miri is a dessert shop known for its wide variety of sweet treats, 
-                    including shaved ice desserts, milk tea, and other unique creations like 
-                    coconut mango HoFan. They also offer popular items like Brown Sugar Ice Jelly, 
-                    Mango Ice Jelly, and Coconut Mashed Taro Ice Jelly. The shop is praised for its 
-                    friendly staff and fresh, handmade ingredients, like the taro balls in their 
-                    ice jelly. 
-                """.trimIndent(),
-                phoneNumber = "+6010-882 4162",
-                categories = listOf("Dessert"),
-                price = "RM10-RM20",
-                mealType = "Lunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
-                address = " Lot 10663 (Ground Floor) Pujut Commercial Centre Jalan Pujut 7,Sungai " +
-                        "Merapa, Lutong, 98000 Miri, Sarawak",
-                mapsUrl = "https://maps.app.goo.gl/1gDXEHVpdF9XEyrL8",
-                hours =mapOf(
-                    "Monday" to "11 am - 9 pm",
-                    "Tuesday" to "Closed",
-                    "Wednesday" to "11 am - 9 pm",
-                    "Thursday" to "11 am - 9 pm",
-                    "Friday" to "11 am - 9 pm",
-                    "Saturday" to "11 am - 9 pm",
-                    "Sunday" to "11 am - 9 pm"
-                ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                rating = 4.4f,        // Added this line
+                reviewCount = 80,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -332,9 +300,9 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "+6011-56319386",
                 categories = listOf("Dessert"),
-                price = "RM10-RM20",
-                mealType = "Lunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                price = "RM1-RM20",
+                mealType = listOf("Lunch","Dinner"),
+                imageGallery = listOf(R.drawable.samicecream_pic1, R.drawable.samicecream_pic2, R.drawable.samicecream_pic3, R.drawable.samicecream_pic4), // insert pictures later
                 address = "Marina Phase 2, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/5agSPrubEqFeVCkX9",
                 hours =mapOf(
@@ -346,9 +314,9 @@ object RestaurantData {
                     "Saturday" to "9 am - 9 pm",
                     "Sunday" to "9 am - 9 pm"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                rating = 4.7f,        // Added this line
+                reviewCount = 24,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -362,10 +330,10 @@ object RestaurantData {
                     cafe in Miri.
                 """.trimIndent(),
                 phoneNumber = "+6011-1668 0202",
-                categories = listOf("Asian", "Local"),
+                categories = listOf("Asian", "Local", "Chinese"),
                 price = "RM1-RM20",
-                mealType = "Breakfast",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                mealType = listOf("Breakfast"),
+                imageGallery = listOf(R.drawable.wangzaidimsum_pic1, R.drawable.wangzaidimsum_pic2, R.drawable.wangzaidimsum_pic3, R.drawable.wangzaidimsum_pic4, R.drawable.wangzaidimsum_pic5), // insert pictures later
                 address = "Marina Phase 2, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/sHXokGbcaH65gTzE6",
                 hours =mapOf(
@@ -378,8 +346,8 @@ object RestaurantData {
                     "Sunday" to "6 am - 2 pm"
                 ),
                 rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                reviewCount = 203,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -391,10 +359,10 @@ object RestaurantData {
                     fun. They also offer other dim sum options, mee kolok, and a custard lava bun. 
                 """.trimIndent(),
                 phoneNumber = "+6013-565 5889",
-                categories = listOf("Asian", "Local"),
+                categories = listOf("Asian", "Local", "Chinese"),
                 price = "RM1-RM20",
-                mealType = "Breakfast",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                mealType = listOf("Breakfast"),
+                imageGallery = listOf(R.drawable.abuidimsum_pic1, R.drawable.abuidimsum_pic2, R.drawable.abuidimsum_pic3, R.drawable.abuidimsum_pic4, R.drawable.abuidimsum_pic5), // insert pictures later
                 address = "Lot 2049 Ground Floor, Marina Square, Phase 1, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/aG4SoyXgGDKzXn5j6",
                 hours =mapOf(
@@ -406,9 +374,9 @@ object RestaurantData {
                     "Saturday" to "6 am - 3 pm",
                     "Sunday" to "6 am - 3 pm"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                rating = 4.2f,        // Added this line
+                reviewCount = 43,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -421,24 +389,24 @@ object RestaurantData {
                     lunch. 
                 """.trimIndent(),
                 phoneNumber = "+6085-421 943",
-                categories = listOf("Asian", "Local", "Halal"),
+                categories = listOf("Asian", "Local", "Halal", "Malaysian"),
                 price = "RM1-RM20",
-                mealType = "Breakfast",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
-                address = "Lot 863, Jalan Helenium, 98000 Miri, Sarawak",
+                mealType = listOf("Breakfast", "Lunch"),
+                imageGallery = listOf(R.drawable.nagaliar_pic1, R.drawable.nagaliar_pic2, R.drawable.nagaliar_pic3, R.drawable.nagaliar_pic4, R.drawable.nagaliar_pic5), // insert pictures later
+                address = "Lot 863, Permaisuri, Jalan Helenium, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/k9KJyCpf8CRHogAb9",
                 hours =mapOf(
-                    "Monday" to "715 am - 330 pm",
-                    "Tuesday" to "715 am - 330 pm",
-                    "Wednesday" to "715 am - 330 pm",
-                    "Thursday" to "715 am - 330 pm",
-                    "Friday" to "715 am - 330 pm",
-                    "Saturday" to "715 am - 330 pm",
+                    "Monday" to "7:15 am - 3:30 pm",
+                    "Tuesday" to "7:15 am - 3:30 pm",
+                    "Wednesday" to "7:15 am - 3:30 pm",
+                    "Thursday" to "7:15 am - 3:30 pm",
+                    "Friday" to "7:15 am - 3:30 pm",
+                    "Saturday" to "7:15 am - 3:30 pm",
                     "Sunday" to "Closed"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                rating = 4.3f,        // Added this line
+                reviewCount = 492,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -454,22 +422,22 @@ object RestaurantData {
                 phoneNumber = "+6016-850 8889",
                 categories = listOf("Asian", "Local", "Chinese"),
                 price = "RM1-RM20",
-                mealType = "Breakfast",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
-                address = "Centerpoint, Jalan Kubu, 98000 Miri, Sarawak",
+                mealType = listOf("Breakfast"),
+                imageGallery = listOf(R.drawable.changman_pic1, R.drawable.changman_pic2, R.drawable.changman_pic3, R.drawable.changman_pic4, R.drawable.changman_pic5), // insert pictures later
+                address = "Sun City, Centerpoint, Jalan Kubu, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/cP96f1MLPNxVtfSs5",
                 hours =mapOf(
-                    "Monday" to "6 am - 130 pm",
-                    "Tuesday" to "6 am - 130 pm",
-                    "Wednesday" to "6 am - 130 pm",
-                    "Thursday" to "6 am - 130 pm",
-                    "Friday" to "6 am - 130 pm",
-                    "Saturday" to "6 am - 130 pm",
-                    "Sunday" to "6 am - 130 pm"
+                    "Monday" to "6 am - 1:30 pm",
+                    "Tuesday" to "6 am - 1:30 pm",
+                    "Wednesday" to "6 am - 1:30 pm",
+                    "Thursday" to "6 am - 1:30 pm",
+                    "Friday" to "6 am - 1:30 pm",
+                    "Saturday" to "6 am - 1:30 pm",
+                    "Sunday" to "6 am - 1:30 pm"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                rating = 4.1f,        // Added this line
+                reviewCount = 352,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -482,24 +450,24 @@ object RestaurantData {
                     according to Miri City Sharing.
                 """.trimIndent(),
                 phoneNumber = "+6014-331 6691",
-                categories = listOf("Asian", "Local", "Halal"),
+                categories = listOf("Asian", "Chinese", "Halal"),
                 price = "RM1-RM20",
-                mealType = "Breakfast",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
-                address = "12, Jalan Bendahara, 98000 Miri, Sarawak",
+                mealType = listOf("Breakfast", "Lunch"),
+                imageGallery = listOf(R.drawable.welcomerestaurant_pic1, R.drawable.welcomerestaurant_pic2, R.drawable.welcomerestaurant_pic3, R.drawable.welcomerestaurant_pic4, R.drawable.welcomerestaurant_pic5), // insert pictures later
+                address = "12, Miri Times Square, Marina Parkcity, Jalan Bendahara, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/c7rPbHqbRbe5JSZ86",
                 hours =mapOf(
-                    "Monday" to "7 am - 430 pm",
-                    "Tuesday" to "7 am - 430 pm",
-                    "Wednesday" to "7 am - 430 pm",
-                    "Thursday" to "7 am - 430 pm",
-                    "Friday" to "7 am - 430 pm",
-                    "Saturday" to "7 am - 430 pm",
-                    "Sunday" to "7 am - 430 pm"
+                    "Monday" to "7 am - 4:30 pm",
+                    "Tuesday" to "7 am - 4:30 pm",
+                    "Wednesday" to "7 am - 4:30 pm",
+                    "Thursday" to "7 am - 4:30 pm",
+                    "Friday" to "7 am - 4:30 pm",
+                    "Saturday" to "7 am - 4:30 pm",
+                    "Sunday" to "7 am - 4:30 pm"
                 ),
                 rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                reviewCount = 240,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -513,10 +481,10 @@ object RestaurantData {
                     enjoy a satisfying meal at reasonable prices.
                 """.trimIndent(),
                 phoneNumber = "+6012-859 1019",
-                categories = listOf("Fusion", "Brunch", "Dessert", "Asian", "Halal"),
-                price = "RM10-RM20",
-                mealType = "Brunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                categories = listOf("Fusion", "Dessert", "Asian", "Halal"),
+                price = "RM20-RM40",
+                mealType = listOf("Breakfast", "Lunch", "Dinner"),
+                imageGallery = listOf(R.drawable.jjbyjen_pic1, R.drawable.jjbyjen_pic2, R.drawable.jjbyjen_pic3, R.drawable.jjbyjen_pic4, R.drawable.jjbyjen_pic5), // insert pictures later
                 address = "Lot 1984 & 1985, Ground Floor, Marina Phase 2, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/r4JuBQ9fegfp6KBZA",
                 hours =mapOf(
@@ -528,8 +496,8 @@ object RestaurantData {
                     "Saturday" to "10 am - 9 pm",
                     "Sunday" to "10 am - 9 pm"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
+                rating = 4.2f,        // Added this line
+                reviewCount = 152,
                 priceLevel= 2
             ),
 
@@ -545,22 +513,22 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "+6017-878 7505",
                 categories = listOf("Chinese","Asian"),
-                price = "RM10-RM30",
-                mealType = "Dinner",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
-                address = "Lot 505, Q290, 98000 Miri",
+                price = "RM20-RM40",
+                mealType = listOf("Breakfast","Lunch","Dinner"),
+                imageGallery = listOf(R.drawable.hilltoplittlekitchen_pic1,R.drawable.hilltoplittlekitchen_pic2, R.drawable.hilltoplittlekitchen_pic3, R.drawable.hilltoplittlekitchen_pic4, R.drawable.hilltoplittlekitchen_pic5), // insert pictures later
+                address = "Riam, Lot 505, Q290, 98000 Miri",
                 mapsUrl = "https://maps.app.goo.gl/KoWdKLaWo6QtqHVbA",
                 hours =mapOf(
-                    "Monday" to "630 am - 10 pm",
-                    "Tuesday" to "630 am - 10 pm",
-                    "Wednesday" to "630 am - 10 pm",
-                    "Thursday" to "630 am - 10 pm",
-                    "Friday" to "630 am - 10 pm",
-                    "Saturday" to "630 am - 10 pm",
-                    "Sunday" to "630 am - 10 pm"
+                    "Monday" to "6:30 am - 10 pm",
+                    "Tuesday" to "6:30 am - 10 pm",
+                    "Wednesday" to "6:30 am - 10 pm",
+                    "Thursday" to "6:30 am - 10 pm",
+                    "Friday" to "6:30 am - 10 pm",
+                    "Saturday" to "6:30 am - 10 pm",
+                    "Sunday" to "6:30 am - 10 pm"
                 ),
                 rating = 4.0f,        // Added this line
-                reviewCount = 1000,
+                reviewCount = 338,
                 priceLevel= 2
             ),
 
@@ -574,9 +542,9 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "N/A",
                 categories = listOf("Chinese", "Asian"),
-                price = "RM10-RM30",
-                mealType = "Dinner",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                price = "RM1-RM20",
+                mealType = listOf("Dinner"),
+                imageGallery = listOf(R.drawable.kuehtiaw_pic1, R.drawable.kuehtiaw_pic2, R.drawable.kuehtiaw_pic3, R.drawable.kuehtiaw_pic4), // insert pictures later
                 address = "5050 Cafe Miri\n" +
                         "604, Jalan Pelita 3, Pelita Commercial Centre, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/dxK1CkmYPzF7ZhAv5",
@@ -590,8 +558,8 @@ object RestaurantData {
                     "Sunday" to "5 pm - 9pm"
                 ),
                 rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                reviewCount = 33,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -607,22 +575,22 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "+6010-775 2552",
                 categories = listOf("Vietnamese", "Asian"),
-                price = "RM10-RM35",
-                mealType = "Dinner",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
-                address = "Jalan Merbau, 98000 Miri, Sarawak",
+                price = "RM20-RM40",
+                mealType = listOf("Dinner"),
+                imageGallery = listOf(R.drawable.saigonreplubicvietnamese_pic1, R.drawable.saigonreplubicvietnamese_pic2, R.drawable.saigonreplubicvietnamese_pic3, R.drawable.saigonreplubicvietnamese_pic4, R.drawable.saigonreplubicvietnamese_pic5), // insert pictures later
+                address = "Permaisuri, Jalan Merbau, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/UYjAeeZtCJNLeTSv5",
                 hours =mapOf(
-                    "Monday" to "1030 am - 9 pm",
-                    "Tuesday" to "1030 am - 9 pm",
-                    "Wednesday" to "1030 am - 9 pm",
-                    "Thursday" to "1030 am - 9 pm",
-                    "Friday" to "1030 am - 9 pm",
-                    "Saturday" to "1030 am - 9 pm",
-                    "Sunday" to "1030 am - 9 pm",
+                    "Monday" to "10:30 am - 9 pm",
+                    "Tuesday" to "10:30 am - 9 pm",
+                    "Wednesday" to "10:30 am - 9 pm",
+                    "Thursday" to "10:30 am - 9 pm",
+                    "Friday" to "10:30 am - 9 pm",
+                    "Saturday" to "10:30 am - 9 pm",
+                    "Sunday" to "10:30 am - 9 pm",
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
+                rating = 4.5f,   // Added this line
+                reviewCount = 182,
                 priceLevel= 2
             ),
 
@@ -636,10 +604,10 @@ object RestaurantData {
                     its innovative menu and ambience, often recommended for special occasions.
                 """.trimIndent(),
                 phoneNumber = "+6014-325 7897",
-                categories = listOf("Western", "Fusion"),
-                price = "RM30-Rm50",
-                mealType = "Dinner",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                categories = listOf("Japanese", "Fusion"),
+                price = "RM20-Rm40",
+                mealType = listOf("Dinner"),
+                imageGallery = listOf(R.drawable.kenny_pic1, R.drawable.kenny_pic2, R.drawable.kenny_pic3, R.drawable.kenny_pic4, R.drawable.kenny_pic5), // insert pictures later
                 address = "Lot 2133, Off Krokop, 10, Jalan Datuk Edward Jeli, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/C8CNRf55EZ5eA4Es7",
                 hours =mapOf(
@@ -651,8 +619,8 @@ object RestaurantData {
                     "Saturday" to "5 pm - 10 pm",
                     "Sunday" to "5 pm - 10 pm",
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
+                rating = 4.2f,        // Added this line
+                reviewCount = 36,
                 priceLevel= 2
             ),
 
@@ -669,8 +637,8 @@ object RestaurantData {
                 phoneNumber = "+6085-410 155",
                 categories = listOf("Indian", "Halal", "Vegetarian"),
                 price = "RM20-Rm40",
-                mealType = "Dinner",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                mealType = listOf("Lunch","Dinner"),
+                imageGallery = listOf(R.drawable.zaikarestaurant_pic1, R.drawable.zaikarestaurant_pic2, R.drawable.zaikarestaurant_pic3, R.drawable.zaikarestaurant_pic4, R.drawable.zaikarestaurant_pic5), // insert pictures later
                 address = " Lot 2512, Jalan Miri-Pujut, Boulevard Commercial Centre, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/zUfU7qhDb82B6qzG8",
                 hours =mapOf(
@@ -682,8 +650,8 @@ object RestaurantData {
                     "Saturday" to "11 am - 10 pm",
                     "Sunday" to "11 am - 10 pm"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
+                rating = 4.4f,        // Added this line
+                reviewCount = 253,
                 priceLevel= 2
             ),
 
@@ -700,11 +668,11 @@ object RestaurantData {
                     Ayam Bakar. They also offer a premium version and options with eggs. 
                 """.trimIndent(),
                 phoneNumber = "+6012-889 5398",
-                categories = listOf("Malaysian", "Halal", "Local"),
-                price = "RM10-Rm15",
-                mealType = "Lunch",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
-                address = "Bangunan Persatuan Jatti Meirek Miri, Lot 1749, Jln Jee Foh Utama, 98000 Miri, Sarawak",
+                categories = listOf("Malaysian", "Halal", "Asian", "Local"),
+                price = "RM1-Rm20",
+                mealType = listOf("Lunch", "Dinner"),
+                imageGallery = listOf(R.drawable.awindnasikukus_pic1, R.drawable.awindnasikukus_pic2, R.drawable.awindnasikukus_pic3, R.drawable.awindnasikukus_pic4, R.drawable.awindnasikukus_pic5), // insert pictures later
+                address = "Bangunan Persatuan Jatti Meirek Miri, Lot 1749, Jln Jee Foh Utama, Krokop, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/9h7YBQ85GqKzDqYa7",
                 hours =mapOf(
                     "Monday" to "11 am - 11 pm",
@@ -715,9 +683,9 @@ object RestaurantData {
                     "Saturday" to "11 am - 11 pm",
                     "Sunday" to "11 am - 11 pm"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                rating = 4.4f,        // Added this line
+                reviewCount = 382,
+                priceLevel= 1
             ),
 
             Restaurant(
@@ -731,10 +699,10 @@ object RestaurantData {
                     dates, family gatherings, or casual hangouts.
                 """.trimIndent(),
                 phoneNumber = "+6016-963 5796",
-                categories = listOf("Western", "Asian Fusion", "Grill"),
+                categories = listOf("Western", "Fusion", "Grill"),
                 price = "RM40-Rm80",
-                mealType = "Dinner",
-                imageGallery = listOf(R.drawable.joa_1, R.drawable.joa_2), // insert pictures later
+                mealType = listOf("Breakfast", "Lunch", "Dinner"),
+                imageGallery = listOf(R.drawable.thenest_pic1, R.drawable.thenest_pic2, R.drawable.thenest_pic3, R.drawable.thenest_pic4, R.drawable.thenest_pic5), // insert pictures later
                 address = "No A-G18, Miri Times Square, Marina Parkcity, 98000, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/vWFjcjvhfEwwe9Mf8",
                 hours =mapOf(
@@ -746,9 +714,42 @@ object RestaurantData {
                     "Saturday" to "9 am - 11 pm",
                     "Sunday" to "9 am - 10 pm"
                 ),
-                rating = 4.0f,        // Added this line
-                reviewCount = 1000,
-                priceLevel= 2
+                rating = 4.8f,        // Added this line
+                reviewCount = 1289,
+                priceLevel= 3
+            ),
+
+            Restaurant(
+                title = "Yuuhi Shabu Shabu & Yakiniku",
+                description = """
+                        Yuuhi Shabu-shabu & Yakiniku Miri is a contemporary Japanese hotpot and BBQ 
+                        eatery nestled in Miri. With its sleek setting and modern flair, Yuuhi 
+                        delivers a flavorful fusion of shabu-shabu broths and yakiniku-style 
+                        grilling, serving premium halal-certified meats—like Wagyu and prawn 
+                        paste—in a warm, stylish environment. Guests can enjoy both communal dining 
+                        and private upstairs rooms—perfect for intimate dinners. Yuuhi stands out as
+                        a refined and inclusive option for families, groups, and food lovers seeking 
+                        that special sizzling experience.
+                    """.trimIndent(),
+                phoneNumber = "+601-4875 9369",
+                categories = listOf("Asian", "Grill", "Japanese"),
+                price = "RM200+",
+                mealType = listOf("Dinner"),
+                imageGallery = listOf(R.drawable.yuuhi_pic1, R.drawable.yuuhi_pic2, R.drawable.yuuhi_pic3, R.drawable.yuuhi_pic4, R.drawable.yuuhi_pic5), // insert pictures later
+                address = "Marina, Lot 2022, Phase 1, 98000 Miri, Sarawak",
+                mapsUrl = "https://maps.app.goo.gl/v7zbwQf6zZY7JcQF8",
+                hours =mapOf(
+                    "Monday" to "6 pm - 10:30 pm",
+                    "Tuesday" to "6 pm - 10:30 pm",
+                    "Wednesday" to "6 pm - 10:30 pm",
+                    "Thursday" to "6 pm - 10:30 pm",
+                    "Friday" to "6 pm - 10:30 pm",
+                    "Saturday" to "11:30 am - 11 pm",
+                    "Sunday" to "11:30 am - 11 pm"
+                ),
+                rating = 4.9f,        // Added this line
+                reviewCount = 2400,
+                priceLevel= 3
             )
         )
 
