@@ -76,11 +76,11 @@ class RestaurantDetailActivity : AppCompatActivity() {
 
             // Favourite button state and interaction
             val isFav = RestaurantStateStore.favoriteRestaurants.value?.contains(restaurant.title) == true
-            favBtn.setImageResource(if (isFav) R.drawable.heart else R.drawable.empty_favourite)
+            favBtn.setImageResource(if (isFav) R.drawable.ic_favourite_filled else R.drawable.ic_favorite)
             favBtn.setOnClickListener {
                 RestaurantStateStore.toggleFavorite(restaurant.title)
                 val newIsFav = RestaurantStateStore.favoriteRestaurants.value?.contains(restaurant.title) == true
-                favBtn.setImageResource(if (newIsFav) R.drawable.heart else R.drawable.empty_favourite)
+                favBtn.setImageResource(if (newIsFav) R.drawable.ic_favourite_filled else R.drawable.ic_favorite)
             }
         }
     }

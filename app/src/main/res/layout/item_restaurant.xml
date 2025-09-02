@@ -49,27 +49,27 @@
                 android:id="@+id/restaurantTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Restaurant Name"
-                android:textSize="17sp"
-                android:textStyle="bold"
-                android:textColor="#2C3E50"
+                android:ellipsize="end"
                 android:fontFamily="@font/poppins_semibold"
                 android:maxLines="1"
-                android:ellipsize="end" />
+                android:text="Restaurant Name"
+                android:textColor="#2C3E50"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
             <!-- Category with background -->
             <TextView
                 android:id="@+id/restaurantCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Category"
-                android:textSize="12sp"
-                android:textColor="#8E44AD"
+                android:layout_marginTop="4dp"
                 android:background="@drawable/category_pill_bg"
+                android:fontFamily="@font/poppins_semibold"
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="2dp"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/poppins_semibold" />
+                android:text="Category"
+                android:textColor="#8E44AD"
+                android:textSize="10sp" />
 
             <!-- Price with icon -->
             <LinearLayout

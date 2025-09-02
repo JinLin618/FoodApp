@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF7ED"
+    android:background="#FFF8F2"
     android:padding="24dp">
 
     <!-- Logo Container -->
@@ -62,15 +62,15 @@
         android:id="@+id/tagline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your tummy’s new BFF"
-        android:textColor="#624D3F"
-        android:textSize="14sp"
         android:layout_marginBottom="190dp"
         android:fontFamily="@font/merriweather_italic"
-        app:layout_constraintTop_toBottomOf="@id/subtitle"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Your tummy’s new BFF"
+        android:textColor="#4D392A"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/startButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/startButton"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle" />
 
     <!-- Start Button -->
     <Button
@@ -86,7 +86,6 @@
         android:paddingRight="40dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:backgroundTint="#D1495B"
         android:background="@drawable/rounded_button_red"
         android:elevation="4dp"
         app:layout_constraintBottom_toTopOf="@id/versionText"

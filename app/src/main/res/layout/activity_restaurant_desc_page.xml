@@ -63,17 +63,24 @@
                     android:layout_alignParentTop="true"/>
 
                 <!-- Favourite button (top right) -->
-                <ImageButton
-                    android:id="@+id/favouritesBtn"
+                <FrameLayout
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_margin="12dp"
                     android:background="@drawable/round_button"
-                    android:contentDescription="Favourite"
-                    app:srcCompat="@drawable/ic_favorite"
-                    app:tint="#FF0000"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentTop="true"/>
+                    android:layout_alignParentTop="true">
+
+                    <ImageButton
+                        android:id="@+id/favouritesBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Favourite"
+                        app:srcCompat="@drawable/ic_favorite"
+                        app:tint="#FF0000"
+                        android:scaleType="centerInside"/>
+                </FrameLayout>
 
             </RelativeLayout>
 
