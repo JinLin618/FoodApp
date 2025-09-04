@@ -58,10 +58,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
+                android:focusable="true"
+                android:textColorHint="#6E6E6E"
                 app:iconifiedByDefault="false"
                 app:queryHint="Search your craving…"
-                android:focusable="true"
-                app:searchIcon="@null"
+                app:searchIcon="@drawable/ic_magnify_glass"
                 app:submitBackground="@android:color/transparent" />
 
         </androidx.cardview.widget.CardView>

@@ -23,11 +23,6 @@ class RestaurantAdapter(
         val restaurantPrice: TextView = itemView.findViewById(R.id.restaurantPrice)
         val ratingText: TextView = itemView.findViewById(R.id.ratingText)
         val bookmarkIcon: ImageView = itemView.findViewById(R.id.bookmarkIcon)
-        val star1: ImageView = itemView.findViewById(R.id.star1)
-        val star2: ImageView = itemView.findViewById(R.id.star2)
-        val star3: ImageView = itemView.findViewById(R.id.star3)
-        val star4: ImageView = itemView.findViewById(R.id.star4)
-        val star5: ImageView = itemView.findViewById(R.id.star5)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantViewHolder {
@@ -41,24 +36,26 @@ class RestaurantAdapter(
 
         // Set restaurant data
         holder.restaurantTitle.text = restaurant.title
-        holder.restaurantCategory.text = restaurant.categories.firstOrNull() ?: "Restaurant"
+        holder.restaurantCategory.text = restaurant.categories.joinToString(", ")
 
         // Set price level
-        val priceSymbol = when (restaurant.priceLevel) {
+        /*val priceSymbol = when (restaurant.priceLevel) {
             1 -> "$"
             2 -> "$$"
             3 -> "$$$"
             4 -> "$$$$"
             else -> "$$"
         }
-        holder.restaurantPrice.text = priceSymbol
+        holder.restaurantPrice.text = priceSymbol*/
 
         // To this:
         holder.restaurantPrice.text = restaurant.price
 
-        // Set rating
         holder.ratingText.text = restaurant.rating.toString()
-        setStarRating(holder, restaurant.rating)
+
+        // Set rating
+        //holder.ratingText.text = restaurant.rating.toString()
+        //setStarRating(holder, restaurant.rating)
 
         // Set restaurant image (use first image from gallery)
         if (restaurant.imageGallery.isNotEmpty()) {
@@ -82,7 +79,7 @@ class RestaurantAdapter(
         }
     }
 
-    private fun setStarRating(holder: RestaurantViewHolder, rating: Float) {
+    /*private fun setStarRating(holder: RestaurantViewHolder, rating: Float) {
         val stars = listOf(holder.star1, holder.star2, holder.star3, holder.star4, holder.star5)
         val fullStars = rating.toInt()
 
@@ -93,7 +90,7 @@ class RestaurantAdapter(
                 else -> star.setImageResource(R.drawable.steak)
             }
         }
-    }
+    }*/
 
     override fun getItemCount() = restaurants.size
 

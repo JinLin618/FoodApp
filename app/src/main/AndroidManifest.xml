@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodApp">
         <activity
-            android:name=".IntroScreenActivity"
+            android:name=".IntroScreenActivity_NotUsed"
             android:exported="false" />
         <activity
             android:name=".RestaurantDetailActivity"

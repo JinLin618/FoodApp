@@ -1,6 +1,10 @@
 package com.example.foodapp
 
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.graphics.Paint
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.widget.ImageButton
@@ -22,10 +26,16 @@ class RestaurantDetailActivity : AppCompatActivity() {
         val ratingBar: RatingBar = findViewById(R.id.restaurantRating)
         val ratingView: TextView = findViewById(R.id.ratingValue)
         val reviewCountView : TextView = findViewById(R.id.reviewCount)
+        val priceView : TextView = findViewById(R.id.restaurantPrice)
+        val priceLevelView : TextView = findViewById(R.id.priceLevel)
         val locationView : TextView = findViewById(R.id.restaurantLocation)
         val contactView : TextView = findViewById(R.id.restaurantContact)
         val hoursView: TextView = findViewById(R.id.restaurantOpenHours)
         val favBtn: ImageButton = findViewById(R.id.favouritesBtn)
+        val mapLink: TextView = findViewById(R.id.restaurantMapLink)
+
+
+
 
         findViewById<ImageButton>(R.id.backBtn).setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
@@ -47,6 +57,33 @@ class RestaurantDetailActivity : AppCompatActivity() {
             ratingBar.rating = restaurant.rating
             locationView.text = restaurant.address
             contactView.text = restaurant.phoneNumber
+            priceView.text = restaurant.price
+            priceLevelView.text = "(${when (restaurant.priceLevel) {
+                1 -> "$"
+                2 -> "$$"
+                3 -> "$$$"
+                4 -> "$$$$"
+                else -> "$$"
+            }})"
+
+            mapLink.text = restaurant.mapsUrl
+            mapLink.setOnClickListener{
+                val url = restaurant.mapsUrl
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply{
+                    setPackage("com.google.android.apps.maps")
+                }
+                try{
+                    startActivity(intent)
+                }catch(e: ActivityNotFoundException){
+
+                    val fallbackIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                    startActivity(fallbackIntent)
+                }
+            }
+
+            //underline the url link
+            mapLink.paintFlags = mapLink.paintFlags or Paint.UNDERLINE_TEXT_FLAG
+
             hoursView.text =
                 restaurant.hours.takeIf { it.isNotEmpty() }?.let { formatHours(it) } ?: "—"
 

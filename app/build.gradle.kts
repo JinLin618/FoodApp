@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.play.services.maps)
     val lifecycle_version = "2.9.2"
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycle_version}")

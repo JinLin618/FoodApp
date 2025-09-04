@@ -37,7 +37,7 @@
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/imageDots"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="8dp"
@@ -269,11 +269,25 @@
                 android:id="@+id/restaurantLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="5dp"
                 android:lineSpacingExtra="6dp"
                 android:text="123 Main Street, Miri"
                 android:textColor="#000000"
                 android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/restaurantMapLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:textSize="16sp"
+                android:autoLink="web"
+                android:clickable="true"
+                android:focusable="true"
+                android:linksClickable="true"
+                android:text="View on Google Maps"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textStyle="bold|italic" />
 
             <!-- Divider -->
             <View
