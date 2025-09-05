@@ -135,31 +135,32 @@ class RestaurantViewModel : ViewModel() {
             val matchesLocation = location == "All" ||
                     restaurant.address.contains(location, ignoreCase = true)
 
-            // Price filter
-
-
-            // Rating filter
-            val matchesRating = rating == "All" || when (rating) {
-                "4+ Stars" -> restaurant.rating >= 4.0f
-                "3+ Stars" -> restaurant.rating >= 3.0f
-                "2+ Stars" -> restaurant.rating >= 2.0f
-                else -> true
-            }
-
             // Favorites filter
             val matchesFavorites = !favoritesOnly || favorites.contains(restaurant.title)
 
-            //  Final filter condition stored in a variable for clarity
-            val shouldInclude = matchesCategory &&
+            matchesCategory &&
                     matchesSearch &&
                     matchesLocation &&
-                    matchesRating &&
                     matchesFavorites
-
-            shouldInclude
         }
 
-        _filteredRestaurants.value = filtered
+        var finalList = filtered
+
+        //  Price sorting
+        finalList = when (price) {
+            "Lowest" -> finalList.sortedBy { it.priceLevel }   // assuming you have priceLevel
+            "Highest" -> finalList.sortedByDescending { it.priceLevel }
+            else -> finalList // "All" → no sorting applied
+        }
+
+        //  Rating sorting
+        finalList = when (rating) {
+            "Lowest" -> finalList.sortedBy { it.rating }
+            "Highest" -> finalList.sortedByDescending { it.rating }
+            else -> finalList // "All" → no sorting applied
+        }
+
+        _filteredRestaurants.value = finalList
     }
 
     override fun onCleared() {

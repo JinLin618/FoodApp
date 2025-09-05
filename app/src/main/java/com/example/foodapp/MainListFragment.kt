@@ -29,8 +29,8 @@ class MainListFragment : Fragment(R.layout.activity_main_screen) {
 
     private val genres = listOf("All", "Dessert", "Local Food", "Western", "Chinese", "Fast Food")
     private val locations = listOf("All", "Marina", "CBD", "North", "Lutong", "Tudan")
-    private val priceRanges = listOf("All", "$", "$$", "$$$", "$$$$")
-    private val ratings = listOf("All", "4+ Stars", "3+ Stars", "2+ Stars")
+    private val priceRanges = listOf("All", "Highest", "Lowest")
+    private val ratings = listOf("All", "Highest", "Lowest")
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

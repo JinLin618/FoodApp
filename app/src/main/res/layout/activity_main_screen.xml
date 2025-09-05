@@ -118,7 +118,7 @@
                     <ImageView
                         android:layout_width="16dp"
                         android:layout_height="16dp"
-                        android:src="@drawable/burger1"
+                        android:src="@drawable/restaurant_icon"
                         android:layout_marginStart="4dp" />
 
                 </LinearLayout>
@@ -151,10 +151,10 @@
                         android:textColor="#333333" />
 
                     <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@drawable/location_filter"
-                        android:layout_marginStart="4dp" />
+                        android:layout_width="11dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/location_icon" />
 
                 </LinearLayout>
 
@@ -186,10 +186,10 @@
                         android:textColor="#333333" />
 
                     <ImageView
-                        android:layout_width="16dp"
+                        android:layout_width="13dp"
                         android:layout_height="16dp"
-                        android:src="@drawable/price_filter"
-                        android:layout_marginStart="4dp" />
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/price_icon" />
 
                 </LinearLayout>
 
@@ -222,7 +222,7 @@
                     <ImageView
                         android:layout_width="16dp"
                         android:layout_height="16dp"
-                        android:src="@drawable/rating_filter"
+                        android:src="@drawable/star_icon"
                         android:layout_marginStart="4dp" />
 
                 </LinearLayout>
