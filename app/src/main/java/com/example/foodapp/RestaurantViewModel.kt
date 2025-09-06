@@ -26,8 +26,8 @@ class RestaurantViewModel : ViewModel() {
     val selectedCategory: LiveData<String> = _selectedCategory
 
     // Store current location filter
-    private val _locationFilter = MutableLiveData<String>()
-    val locationFilter: LiveData<String> = _locationFilter
+    private val _selectedLocation = MutableLiveData<String>()
+    val selectedLocation: LiveData<String> = _selectedLocation
 
     // Store current price filter
     private val _priceFilter = MutableLiveData<String>()
@@ -53,9 +53,9 @@ class RestaurantViewModel : ViewModel() {
     init {
         _searchQuery.value = RestaurantStateStore.searchQuery.value ?: ""
         _selectedCategory.value = RestaurantStateStore.selectedCategory.value ?: "All"
-        _locationFilter.value = RestaurantStateStore.locationFilter.value ?: "All"
-        _priceFilter.value = RestaurantStateStore.priceFilter.value ?: "All"
-        _ratingFilter.value = RestaurantStateStore.ratingFilter.value ?: "All"
+        _selectedLocation.value = RestaurantStateStore.selectedLocation.value ?: "All"
+        _priceFilter.value = RestaurantStateStore.priceFilter.value ?: "-"
+        _ratingFilter.value = RestaurantStateStore.ratingFilter.value ?: "-"
         _favoriteRestaurants.value = RestaurantStateStore.favoriteRestaurants.value ?: emptySet()
         _showFavoritesOnly.value = RestaurantStateStore.showFavoritesOnly.value ?: false
         _filteredRestaurants.value = allRestaurants
@@ -76,7 +76,7 @@ class RestaurantViewModel : ViewModel() {
     }
 
     fun updateLocationFilter(location: String) {
-        _locationFilter.value = location
+        _selectedLocation.value = location
         RestaurantStateStore.setLocationFilter(location)
         filterRestaurants()
     }
@@ -115,7 +115,7 @@ class RestaurantViewModel : ViewModel() {
     private fun filterRestaurants() {
         val query = _searchQuery.value ?: ""
         val category = _selectedCategory.value ?: "All"
-        val location = _locationFilter.value ?: "All"
+        val location = _selectedLocation.value ?: "All"
         val price = _priceFilter.value ?: "All"
         val rating = _ratingFilter.value ?: "All"
         val favorites = _favoriteRestaurants.value ?: emptySet()

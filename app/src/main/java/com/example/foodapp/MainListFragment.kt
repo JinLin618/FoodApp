@@ -27,8 +27,8 @@ class MainListFragment : Fragment(R.layout.activity_main_screen) {
     private lateinit var restaurantAdapter: RestaurantAdapter
     private lateinit var viewModel: RestaurantViewModel
 
-    private val genres = listOf("All", "Dessert", "Local Food", "Western", "Chinese", "Fast Food")
-    private val locations = listOf("All", "Marina", "CBD", "North", "Lutong", "Tudan")
+    private val genres = listOf("All", "Asian", "Local", "Fusion", "Halal", "Western", "Vegetarian", "Grill", "Malaysian", "Chinese", "Indian", "Vietnamese", "Japanese")
+    private val locations = listOf("All", "Riam", "Pujut", "Pelita", "Krokop", "Marina", "Boulevard", "Permaisuri" , "Sun City", "Miri Times Square")
     private val priceRanges = listOf("All", "Highest", "Lowest")
     private val ratings = listOf("All", "Highest", "Lowest")
 
@@ -68,8 +68,8 @@ class MainListFragment : Fragment(R.layout.activity_main_screen) {
 
         // Restore UI texts from state on first creation
         view.findViewById<TextView>(R.id.genreFilterText).text = RestaurantStateStore.selectedCategory.value ?: "Genre"
-        view.findViewById<TextView>(R.id.locationFilterText).text = RestaurantStateStore.locationFilter.value ?: "Location"
-        view.findViewById<TextView>(R.id.priceFilterText).text = RestaurantStateStore.priceFilter.value ?: "Price Range"
+        view.findViewById<TextView>(R.id.locationFilterText).text = RestaurantStateStore.selectedLocation.value ?: "Location"
+        view.findViewById<TextView>(R.id.priceFilterText).text = RestaurantStateStore.priceFilter.value ?: "Price"
         view.findViewById<TextView>(R.id.ratingFilterText).text = RestaurantStateStore.ratingFilter.value ?: "Rating"
     }
 
@@ -109,7 +109,7 @@ class MainListFragment : Fragment(R.layout.activity_main_screen) {
         }
 
         priceFilterCard.setOnClickListener {
-            showFilterDialog("Price Range", priceRanges) { selectedPrice ->
+            showFilterDialog("Price", priceRanges) { selectedPrice ->
                 viewModel.updatePriceFilter(selectedPrice)
                 root.findViewById<TextView>(R.id.priceFilterText).text = selectedPrice
             }
@@ -152,6 +152,19 @@ class MainListFragment : Fragment(R.layout.activity_main_screen) {
         viewModel.selectedCategory.observe(viewLifecycleOwner) { category: String ->
             root.findViewById<TextView>(R.id.genreFilterText).text = if (category == "All") "Genre" else category
         }
+
+        viewModel.selectedLocation.observe(viewLifecycleOwner) { location: String ->
+            root.findViewById<TextView>(R.id.locationFilterText).text = if (location == "All") "Location" else location
+        }
+
+        viewModel.priceFilter.observe(viewLifecycleOwner) { price: String ->
+            root.findViewById<TextView>(R.id.priceFilterText).text = if (price == "All") "Price" else price
+        }
+
+        viewModel.ratingFilter.observe(viewLifecycleOwner) { rating: String ->
+            root.findViewById<TextView>(R.id.ratingFilterText).text = if (rating == "All") "Rating" else rating
+        }
+
     }
 }
 

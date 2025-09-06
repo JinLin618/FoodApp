@@ -14,8 +14,8 @@ object RestaurantStateStore {
     private val _selectedCategory = MutableLiveData("All")
     val selectedCategory: LiveData<String> = _selectedCategory
 
-    private val _locationFilter = MutableLiveData("All")
-    val locationFilter: LiveData<String> = _locationFilter
+    private val _selectedLocation = MutableLiveData("All")
+    val selectedLocation: LiveData<String> = _selectedLocation
 
     private val _priceFilter = MutableLiveData("All")
     val priceFilter: LiveData<String> = _priceFilter
@@ -31,7 +31,7 @@ object RestaurantStateStore {
 
     fun setSearchQuery(query: String) { _searchQuery.value = query }
     fun setSelectedCategory(category: String) { _selectedCategory.value = category }
-    fun setLocationFilter(location: String) { _locationFilter.value = location }
+    fun setLocationFilter(location: String) { _selectedLocation.value = location }
     fun setPriceFilter(price: String) { _priceFilter.value = price }
     fun setRatingFilter(rating: String) { _ratingFilter.value = rating }
 

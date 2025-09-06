@@ -279,7 +279,7 @@
                 android:id="@+id/restaurantMapLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="17dp"
                 android:textSize="16sp"
                 android:autoLink="web"
                 android:clickable="true"

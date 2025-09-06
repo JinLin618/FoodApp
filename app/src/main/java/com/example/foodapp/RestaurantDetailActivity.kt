@@ -35,8 +35,6 @@ class RestaurantDetailActivity : AppCompatActivity() {
         val mapLink: TextView = findViewById(R.id.restaurantMapLink)
 
 
-
-
         findViewById<ImageButton>(R.id.backBtn).setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
