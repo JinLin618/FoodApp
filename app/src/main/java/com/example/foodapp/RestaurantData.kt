@@ -510,7 +510,7 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "+6014-325 7897",
                 categories = listOf("Japanese", "Fusion"),
-                price = "RM20-Rm40",
+                price = "RM20-RM40",
                 mealType = listOf("Dinner"),
                 imageGallery = listOf(R.drawable.kenny_pic1, R.drawable.kenny_pic2, R.drawable.kenny_pic3, R.drawable.kenny_pic4, R.drawable.kenny_pic5), // insert pictures later
                 address = "Lot 2133, Off Krokop, 10, Jalan Datuk Edward Jeli, 98000 Miri, Sarawak",
@@ -536,7 +536,7 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "+6085-410 155",
                 categories = listOf("Indian", "Halal", "Vegetarian"),
-                price = "RM20-Rm40",
+                price = "RM20-RM40",
                 mealType = listOf("Lunch","Dinner"),
                 imageGallery = listOf(R.drawable.zaikarestaurant_pic1, R.drawable.zaikarestaurant_pic2, R.drawable.zaikarestaurant_pic3, R.drawable.zaikarestaurant_pic4, R.drawable.zaikarestaurant_pic5), // insert pictures later
                 address = " Lot 2512, Jalan Miri-Pujut, Boulevard Commercial Centre, 98000 Miri, Sarawak",
@@ -562,7 +562,7 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "+6012-889 5398",
                 categories = listOf("Malaysian", "Halal", "Asian", "Local"),
-                price = "RM1-Rm20",
+                price = "RM1-RM20",
                 mealType = listOf("Lunch", "Dinner"),
                 imageGallery = listOf(R.drawable.awindnasikukus_pic1, R.drawable.awindnasikukus_pic2, R.drawable.awindnasikukus_pic3, R.drawable.awindnasikukus_pic4, R.drawable.awindnasikukus_pic5), // insert pictures later
                 address = "Bangunan Persatuan Jatti Meirek Miri, Lot 1749, Jln Jee Foh Utama, Krokop, 98000 Miri, Sarawak",
@@ -588,7 +588,7 @@ object RestaurantData {
                 """.trimIndent(),
                 phoneNumber = "+6016-963 5796",
                 categories = listOf("Western", "Fusion", "Grill"),
-                price = "RM40-Rm80",
+                price = "RM40-RM80",
                 mealType = listOf("Breakfast", "Lunch", "Dinner"),
                 imageGallery = listOf(R.drawable.thenest_pic1, R.drawable.thenest_pic2, R.drawable.thenest_pic3, R.drawable.thenest_pic4, R.drawable.thenest_pic5), // insert pictures later
                 address = "No A-G18, Miri Times Square, Marina Parkcity, 98000, 98000 Miri, Sarawak",
@@ -612,7 +612,7 @@ object RestaurantData {
                 description = """
                         Yuuhi Shabu-shabu & Yakiniku Miri is a contemporary Japanese hotpot and BBQ eatery nestled in Miri. With its sleek setting and modern flair, Yuuhi delivers a flavorful fusion of shabu-shabu broths and yakiniku-style  grilling, serving premium halal-certified meats—like Wagyu and prawn paste—in a warm, stylish environment. Guests can enjoy both communal dining and private upstairs rooms—perfect for intimate dinners. Yuuhi stands out as a refined and inclusive option for families, groups, and food lovers seeking that special sizzling experience.
                     """.trimIndent(),
-                phoneNumber = "+601-4875 9369",
+                phoneNumber = "+6014-875 9369",
                 categories = listOf("Asian", "Grill", "Japanese"),
                 price = "RM200+",
                 mealType = listOf("Dinner"),
@@ -631,6 +631,32 @@ object RestaurantData {
                 rating = 4.9f,        // Added this line
                 reviewCount = 2400,
                 priceLevel= 4
+            ),
+
+            Restaurant(
+                title = "Hage Kitchen & Dine",
+                description = """
+                        Hage Kitchen & Dine is known for its cozy atmosphere and affordable, well-portioned food. Located in the Desa Senadin Commercial Center, it serves a variety of Asian and Western dishes, including fried chicken, curries, and pastas. It has received positive reviews for its tasty food and good service. The restaurant is often noted as a pleasant place for gatherings.
+                    """.trimIndent(),
+                phoneNumber = "+6016-818 5569",
+                categories = listOf("Fusion", "Western", "Asian"),
+                price = "RM20-RM40",
+                mealType = listOf("Lunch", "Dinner"),
+                imageGallery = listOf(R.drawable.hage_pic1, R.drawable.hage_pic2, R.drawable.hage_pic3, R.drawable.hage_pic4, R.drawable.hage_pic5, R.drawable.hage_pic6), // insert pictures later
+                address = "Lot 11584 Block 5 Kuala Baram Land District, Jln Desa Senadin, Phase 8, Desa Senadin Commercial Centre, 98000 Miri, Sarawak",
+                mapsUrl = "https://maps.app.goo.gl/CfVSxRMszoit8RoK8",
+                hours =mapOf(
+                    "Monday" to "11 am - 10 pm",
+                    "Tuesday" to "11 am - 10 pm",
+                    "Wednesday" to "Closed",
+                    "Thursday" to "11 am - 10 pm",
+                    "Friday" to "11 am - 10 pm",
+                    "Saturday" to "11 am - 10 pm",
+                    "Sunday" to "11 am - 10 pm"
+                ),
+                rating = 4.9f,        // Added this line
+                reviewCount = 16,
+                priceLevel= 2
             )
         )
 

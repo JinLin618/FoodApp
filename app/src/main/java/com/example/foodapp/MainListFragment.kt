@@ -28,7 +28,7 @@ class MainListFragment : Fragment(R.layout.activity_main_screen) {
     private lateinit var viewModel: RestaurantViewModel
 
     private val genres = listOf("All", "Asian", "Local", "Fusion", "Halal", "Western", "Vegetarian", "Grill", "Malaysian", "Chinese", "Indian", "Vietnamese", "Japanese")
-    private val locations = listOf("All", "Riam", "Pujut", "Pelita", "Krokop", "Marina", "Boulevard", "Permaisuri" , "Sun City", "Miri Times Square")
+    private val locations = listOf("All", "Riam", "Pujut", "Pelita", "Senadin", "Krokop", "Marina", "Boulevard", "Permaisuri" , "Sun City", "Miri Times Square")
     private val priceRanges = listOf("All", "Highest", "Lowest")
     private val ratings = listOf("All", "Highest", "Lowest")
 
