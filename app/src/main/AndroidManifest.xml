@@ -12,12 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodApp">
 
-        <activity
-            android:name=".RestaurantDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".WelcomeActivity"
-            android:exported="false" />
+
+
+
+
         <activity
             android:name=".MainListActivity"
             android:exported="true">
