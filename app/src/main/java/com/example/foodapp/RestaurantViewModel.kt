@@ -45,6 +45,10 @@ class RestaurantViewModel : ViewModel() {
     private val _showFavoritesOnly = MutableLiveData<Boolean>()
     val showFavoritesOnly: LiveData<Boolean> = _showFavoritesOnly
 
+    private val _selectedRestaurant = MutableLiveData<Restaurant>()
+    val selectedRestaurant: LiveData<Restaurant> = _selectRestaurant
+
+
     private val stateFavoriteObserver = Observer<Set<String>> { favorites: Set<String> ->
         _favoriteRestaurants.value = favorites
         filterRestaurants()
@@ -61,6 +65,10 @@ class RestaurantViewModel : ViewModel() {
         _filteredRestaurants.value = allRestaurants
 
         RestaurantStateStore.favoriteRestaurants.observeForever(stateFavoriteObserver)
+    }
+
+    fun selectRestaurant(restaurant: Restaurant){
+        _selectedRestaurant.value = restaurant
     }
 
     fun updateSearchQuery(query: String) {

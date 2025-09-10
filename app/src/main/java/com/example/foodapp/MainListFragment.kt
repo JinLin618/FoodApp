@@ -62,6 +62,8 @@ class MainListFragment : Fragment(R.layout.activity_main_screen) {
             adapter = restaurantAdapter
         }
 
+
+
         setupSearchView()
         setupFilterButtons(view)
         observeViewModel(view)

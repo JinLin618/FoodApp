@@ -8,23 +8,25 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+/* This class use to handle the data which will be display in the recycler view */
 class RestaurantAdapter(
-    private var restaurants: List<Restaurant>,
-    private val onItemClick: (Restaurant) -> Unit,
+    private var restaurants: List<Restaurant>, //store the list of restaurants
+    private val onItemClick: (Restaurant) -> Unit, //
     private val onFavoriteClick: (Restaurant, Int) -> Unit
 ) : RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>() {
 
-    private var favoriteRestaurants = mutableSetOf<String>()
+    private var favoriteRestaurants = mutableSetOf<String>() //store list of favourite restaurant
 
     class RestaurantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val restaurantImage: ImageView = itemView.findViewById(R.id.restaurantImage)
-        val restaurantTitle: TextView = itemView.findViewById(R.id.restaurantTitle)
-        val restaurantCategory: TextView = itemView.findViewById(R.id.restaurantCategory)
-        val restaurantPrice: TextView = itemView.findViewById(R.id.restaurantPrice)
-        val ratingText: TextView = itemView.findViewById(R.id.ratingText)
-        val bookmarkIcon: ImageView = itemView.findViewById(R.id.bookmarkIcon)
+        val restaurantImage: ImageView = itemView.findViewById(R.id.restaurantImage) //store the restaurant images
+        val restaurantTitle: TextView = itemView.findViewById(R.id.restaurantTitle) //store the restaurant name
+        val restaurantCategory: TextView = itemView.findViewById(R.id.restaurantCategory) //store the restaurant category
+        val restaurantPrice: TextView = itemView.findViewById(R.id.restaurantPrice) //store the restaurant price range
+        val ratingText: TextView = itemView.findViewById(R.id.ratingText) //store the restaurant rating
+        val bookmarkIcon: ImageView = itemView.findViewById(R.id.bookmarkIcon) //store the favourite icon
     }
 
+    //open the item_restaurant layout
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_restaurant, parent, false)
@@ -36,26 +38,15 @@ class RestaurantAdapter(
 
         // Set restaurant data
         holder.restaurantTitle.text = restaurant.title
+
+        // Set restaurant category
         holder.restaurantCategory.text = restaurant.categories.joinToString(", ")
 
-        // Set price level
-        /*val priceSymbol = when (restaurant.priceLevel) {
-            1 -> "$"
-            2 -> "$$"
-            3 -> "$$$"
-            4 -> "$$$$"
-            else -> "$$"
-        }
-        holder.restaurantPrice.text = priceSymbol*/
-
-        // To this:
+        // Set price range
         holder.restaurantPrice.text = restaurant.price
 
-        holder.ratingText.text = restaurant.rating.toString()
-
         // Set rating
-        //holder.ratingText.text = restaurant.rating.toString()
-        //setStarRating(holder, restaurant.rating)
+        holder.ratingText.text = restaurant.rating.toString()
 
         // Set restaurant image (use first image from gallery)
         if (restaurant.imageGallery.isNotEmpty()) {
@@ -63,36 +54,24 @@ class RestaurantAdapter(
         }
 
         // Handle bookmark state
-        val isBookmarked = favoriteRestaurants.contains(restaurant.title)
+        val isFavourite = favoriteRestaurants.contains(restaurant.title)
         holder.bookmarkIcon.setImageResource(
-            if (isBookmarked) R.drawable.heart
-            else R.drawable.empty_favourite
+            if (isFavourite) R.drawable.heart //when the restaurant marked as favourite, fill in the heart icon
+            else R.drawable.empty_favourite //otherwise, it will remain as an empty heart icon
         )
 
-        // Set click listeners
+        // when click on itemView, pass "this" restaurant
         holder.itemView.setOnClickListener {
             onItemClick(restaurant)
         }
 
+        // when clicked on the specific restaurant's favourite icon, it will handle favourite state of the restaurant
         holder.bookmarkIcon.setOnClickListener {
             onFavoriteClick(restaurant, position)
         }
     }
 
-    /*private fun setStarRating(holder: RestaurantViewHolder, rating: Float) {
-        val stars = listOf(holder.star1, holder.star2, holder.star3, holder.star4, holder.star5)
-        val fullStars = rating.toInt()
-
-        stars.forEachIndexed { index, star ->
-            when {
-                index < fullStars -> star.setImageResource(R.drawable.coffee)
-                index == fullStars && rating % 1 >= 0.5 -> star.setImageResource(R.drawable.cake1) // For half stars, use filled for now
-                else -> star.setImageResource(R.drawable.steak)
-            }
-        }
-    }*/
-
-    override fun getItemCount() = restaurants.size
+    override fun getItemCount() = restaurants.size //to get the total number of restaurants
 
     // Method to update the restaurant list (for search/filter)
     fun updateRestaurants(newRestaurants: List<Restaurant>) {
@@ -100,7 +79,7 @@ class RestaurantAdapter(
         notifyDataSetChanged()
     }
 
-    // Method to toggle favorite status
+    // Method to toggle favorite status, add/remove restaurant from the favourite list
     fun toggleFavorite(restaurantTitle: String, position: Int) {
         if (favoriteRestaurants.contains(restaurantTitle)) {
             favoriteRestaurants.remove(restaurantTitle)
@@ -110,7 +89,7 @@ class RestaurantAdapter(
         notifyItemChanged(position)
     }
 
-    // Method to get favorite restaurants
+    // Method to get all the favorite restaurants
     fun getFavoriteRestaurants(): Set<String> {
         return favoriteRestaurants.toSet()
     }

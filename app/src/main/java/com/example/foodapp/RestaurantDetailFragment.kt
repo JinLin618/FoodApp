@@ -1,52 +1,55 @@
 package com.example.foodapp
 
-
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.Paint
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import android.widget.RatingBar
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-class RestaurantDetailActivity : AppCompatActivity() {
+class RestaurantDetailFragment : Fragment(R.layout.activity_restaurant_desc_page){
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    private val viewModel: RestaurantViewModel by activityViewModels()
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_restaurant_desc_page)
 
-        val titleView: TextView = findViewById(R.id.restaurantName)
-        val descView: TextView = findViewById(R.id.restaurantDescription)
-        val ratingBar: RatingBar = findViewById(R.id.restaurantRating)
-        val ratingView: TextView = findViewById(R.id.ratingValue)
-        val reviewCountView : TextView = findViewById(R.id.reviewCount)
-        val priceView : TextView = findViewById(R.id.restaurantPrice)
-        val priceLevelView : TextView = findViewById(R.id.priceLevel)
-        val locationView : TextView = findViewById(R.id.restaurantLocation)
-        val contactView : TextView = findViewById(R.id.restaurantContact)
-        val hoursView: TextView = findViewById(R.id.restaurantOpenHours)
-        val favBtn: ImageButton = findViewById(R.id.favouritesBtn)
-        val mapLink: TextView = findViewById(R.id.restaurantMapLink)
-
+        val titleView: TextView = view.findViewById(R.id.restaurantName)
+        val descView: TextView = view.findViewById(R.id.restaurantDescription)
+        val ratingBar: RatingBar = view.findViewById(R.id.restaurantRating)
+        val ratingView: TextView = view.findViewById(R.id.ratingValue)
+        val reviewCountView : TextView = view.findViewById(R.id.reviewCount)
+        val priceView : TextView = view.findViewById(R.id.restaurantPrice)
+        val priceLevelView : TextView = view.findViewById(R.id.priceLevel)
+        val locationView : TextView = view.findViewById(R.id.restaurantLocation)
+        val contactView : TextView = view.findViewById(R.id.restaurantContact)
+        val hoursView: TextView = view.findViewById(R.id.restaurantOpenHours)
+        val favBtn: ImageButton = view.findViewById(R.id.favouritesBtn)
+        val mapLink: TextView = view.findViewById(R.id.restaurantMapLink)
 
 
-        findViewById<ImageButton>(R.id.backBtn).setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
+
+        view.findViewById<ImageButton>(R.id.backBtn).setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
         // Get the restaurant data
-        val restaurant = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        /*val restaurant = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             intent.getParcelableExtra("restaurant", Restaurant::class.java)
         } else {
             @Suppress("DEPRECATION") // Suppress deprecation warning for older versions
             intent.getParcelableExtra<Restaurant>("restaurant")
-        }
+        }*/
+
+        viewModel.selected
 
         if (restaurant != null) {
             titleView.text = restaurant.title
@@ -120,6 +123,8 @@ class RestaurantDetailActivity : AppCompatActivity() {
             }
         }
     }
+
+
     private fun formatHours(hours: Map<String, String>): String {
         // Example map: {"Mon-Fri" to "10:00–22:00", "Sat" to "10:00–23:00", "Sun" to "Closed"}
         // Result:
