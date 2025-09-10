@@ -11,15 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodApp">
-        <activity
-            android:name=".IntroScreenActivity_NotUsed"
-            android:exported="false" />
-        <activity
-            android:name=".RestaurantDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".WelcomeActivity"
-            android:exported="false" />
+
+
+
+
+
         <activity
             android:name=".MainListActivity"
             android:exported="true">
