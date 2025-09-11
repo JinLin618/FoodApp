@@ -1,6 +1,9 @@
 package com.example.foodapp
 
-
+/* This object class is to store all the relevant restaurants with their corresponding data,
+which all will be shown in the recyclerView using the adapter to display the data,
+the data being stored are: restaurant name, description, phone number, categories, price range,
+meal type, images, address, map URL, opening hours.*/
 object RestaurantData {
     fun getAllData() : List<Restaurant>{
         return listOf(
@@ -14,7 +17,7 @@ object RestaurantData {
                 categories = listOf("Dessert"),
                 price = "RM20-RM40",
                 mealType = listOf("Lunch"),
-                imageGallery = listOf(R.drawable.coffeejoa_pic5, R.drawable.coffeejoa_pic1, R.drawable.coffeejoa_pic2,R.drawable.coffeejoa_pic3, R.drawable.coffeejoa_pic4), // insert pictures later
+                imageGallery = listOf(R.drawable.coffeejoa_pic5, R.drawable.coffeejoa_pic1, R.drawable.coffeejoa_pic2,R.drawable.coffeejoa_pic3, R.drawable.coffeejoa_pic4),
                 address = "Coffee Joa, Lot 1996, Ground Floor, Marina Square 2, Marina Parkcity, Miri, Sarawak, Malaysia",
                 mapsUrl = "https://maps.app.goo.gl/5MGkK1JkgsH9b2qc8",
                 hours = mapOf(
@@ -25,7 +28,7 @@ object RestaurantData {
                     "Friday" to "10 am–10 pm",
                     "Saturday" to "10 am–10 pm",
                     "Sunday" to "10 am–10 pm"),
-                rating = 4.6f,        // Added this line
+                rating = 4.6f,
                 reviewCount = 92,
                 priceLevel= 2
 
@@ -40,7 +43,7 @@ object RestaurantData {
                 categories = listOf("Dessert"),
                 price = "RM1-RM20",
                 mealType = listOf("Lunch"),
-                imageGallery = listOf(R.drawable.inthemood_pic1, R.drawable.inthemood_pic2, R.drawable.inthemood_pic3, R.drawable.inthemood_pic4, R.drawable.inthemood_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.inthemood_pic1, R.drawable.inthemood_pic2, R.drawable.inthemood_pic3, R.drawable.inthemood_pic4, R.drawable.inthemood_pic5),
                 address = "Ground Floor, Lot 633, Jalan North Yu Seng, Utara, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/zJeV7oDYNrYCKc527",
                 hours =mapOf(
@@ -52,7 +55,7 @@ object RestaurantData {
                     "Saturday" to "10:15 am - 6 pm",
                     "Sunday" to "10:15  am - 6 pm"
                 ),
-                rating = 4.7f,        // Added this line
+                rating = 4.7f,
                 reviewCount = 114,
                 priceLevel= 1
             ),
@@ -66,7 +69,7 @@ object RestaurantData {
                 categories = listOf("Dessert"),
                 price = "RM1-RM20",
                 mealType = listOf("Lunch"),
-                imageGallery = listOf(R.drawable.thelittlogo, R.drawable.thelitt1, R.drawable.thelitt2, R.drawable.thelitt3, R.drawable.thelitt4, R.drawable.thelitt5), // insert pictures later
+                imageGallery = listOf(R.drawable.thelittlogo, R.drawable.thelitt1, R.drawable.thelitt2, R.drawable.thelitt3, R.drawable.thelitt4, R.drawable.thelitt5),
                 address = "Ground Floor, lot 2070, Jalan Brighton, Marina Phase 1, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/hUobAf1pNpU7BzCRA",
                 hours =mapOf(
@@ -78,7 +81,7 @@ object RestaurantData {
                     "Saturday" to "10:30 am - 10:30 pm",
                     "Sunday" to "10:30 am - 10:30 pm"
                 ),
-                rating = 4.5f,        // Added this line
+                rating = 4.5f,
                 reviewCount = 74,
                 priceLevel= 1
             ),
@@ -92,7 +95,7 @@ object RestaurantData {
                 categories = listOf("Dessert", "Western"),
                 price = "RM20-RM40",
                 mealType = listOf("Breakfast", "Lunch"),
-                imageGallery = listOf(R.drawable.unitedcoffee_pic1, R.drawable.unitedcoffee_pic2,R.drawable.unitedcoffee_pic3,R.drawable.unitedcoffee_pic4,R.drawable.unitedcoffee_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.unitedcoffee_pic1, R.drawable.unitedcoffee_pic2,R.drawable.unitedcoffee_pic3,R.drawable.unitedcoffee_pic4,R.drawable.unitedcoffee_pic5),
                 address = " Lot 1862, Marina Phase 2, Miri City, Marina Parkcity, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/KC6pZ1E9BxV1oA6eA",
                 hours =mapOf(
@@ -104,7 +107,7 @@ object RestaurantData {
                     "Saturday" to "08:30 am - 10 pm",
                     "Sunday" to "8:30 am - 5 pm"
                 ),
-                rating = 4.3f,        // Added this line
+                rating = 4.3f,
                 reviewCount = 31,
                 priceLevel= 2
             ),
@@ -118,7 +121,7 @@ object RestaurantData {
                 categories = listOf("Dessert"),
                 price = "RM20-RM40",
                 mealType = listOf("Lunch"),
-                imageGallery = listOf(R.drawable.cremestudio_pic4, R.drawable.cremestudio_pic1,R.drawable.cremestudio_pic2,R.drawable.cremestudio_pic3,R.drawable.cremestudio_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.cremestudio_pic4, R.drawable.cremestudio_pic1,R.drawable.cremestudio_pic2,R.drawable.cremestudio_pic3,R.drawable.cremestudio_pic5),
                 address = "Marina Phase 2, Miri.",
                 mapsUrl = "https://share.google/OrN3GuLKGnPihqNX8",
                 hours =mapOf(
@@ -130,7 +133,7 @@ object RestaurantData {
                     "Saturday" to "10:30 am - 10:30 pm",
                     "Sunday" to "10:30 am - 10:30 pm"
                 ),
-                rating = 4.3f,        // Added this line
+                rating = 4.3f,
                 reviewCount = 6,
                 priceLevel= 2
             ),
@@ -144,7 +147,7 @@ object RestaurantData {
                 categories = listOf("Dessert"),
                 price = "RM1-RM20",
                 mealType = listOf("Lunch"),
-                imageGallery = listOf(R.drawable.sipslowbar_pic4, R.drawable.sipslowbar_pic3, R.drawable.sipslowbar_pic2,R.drawable.sipslowbar_pic1), // insert pictures later
+                imageGallery = listOf(R.drawable.sipslowbar_pic4, R.drawable.sipslowbar_pic3, R.drawable.sipslowbar_pic2,R.drawable.sipslowbar_pic1),
                 address = "Lot 577, 1st Floor (above QQ Beijing Roasted Duck), Pelita Commercial Centre, " +
                         "Miri\n" +
                         "(Opposite 5050 Café)",
@@ -158,7 +161,7 @@ object RestaurantData {
                     "Saturday" to "12 pm - 10 pm ",
                     "Sunday" to "12 pm - 10 pm "
                 ),
-                rating = 5.0f,        // Added this line
+                rating = 5.0f,
                 reviewCount = 4,
                 priceLevel= 1
             ),
@@ -172,7 +175,7 @@ object RestaurantData {
                 categories = listOf("Dessert"),
                 price = "RM20-RM40",
                 mealType = listOf("Lunch"),
-                imageGallery = listOf(R.drawable.bonbon_pic4, R.drawable.bonbon_pic1, R.drawable.bonbon_pic2,R.drawable.bonbon_pic3, R.drawable.bonbon_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.bonbon_pic4, R.drawable.bonbon_pic1, R.drawable.bonbon_pic2,R.drawable.bonbon_pic3, R.drawable.bonbon_pic5),
                 address = " 596, Jalan Pelita 2, Pelita Commercial Centre, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/AWKnk8wyU9Jx3P886",
                 hours =mapOf(
@@ -184,7 +187,7 @@ object RestaurantData {
                     "Saturday" to "10 am - 6 pm  ",
                     "Sunday" to "10 am - 6 pm  "
                 ),
-                rating = 3.9f,        // Added this line
+                rating = 3.9f,
                 reviewCount = 158,
                 priceLevel= 2
             ),
@@ -198,7 +201,7 @@ object RestaurantData {
                 categories = listOf("Dessert"),
                 price = "RM1-RM20",
                 mealType = listOf("Lunch"),
-                imageGallery = listOf(R.drawable.bluecottagecoffee_pic1, R.drawable.bluecottagecoffee_pic2, R.drawable.bluecottagecoffee_pic3, R.drawable.bluecottagecoffee_pic4), // insert pictures later
+                imageGallery = listOf(R.drawable.bluecottagecoffee_pic1, R.drawable.bluecottagecoffee_pic2, R.drawable.bluecottagecoffee_pic3, R.drawable.bluecottagecoffee_pic4),
                 address = "  No.6, Ground Floor & M Floor, Lot 2357, Jalan Krokop 2, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/eeWDa8Vo9fGXHojNA",
                 hours =mapOf(
@@ -210,7 +213,7 @@ object RestaurantData {
                     "Saturday" to "8 am - 5 pm",
                     "Sunday" to "Closed"
                 ),
-                rating = 4.6f,        // Added this line
+                rating = 4.6f,
                 reviewCount = 83,
                 priceLevel= 1
             ),
@@ -224,7 +227,7 @@ object RestaurantData {
                 categories = listOf("Dessert"),
                 price = "RM1-rm20",
                 mealType = listOf("Lunch","Dinner"),
-                imageGallery = listOf(R.drawable.qqdessert_pic1, R.drawable.qqdessert_pic2, R.drawable.qqdessert_pic3, R.drawable.qqdessert_pic4, R.drawable.qqdessert_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.qqdessert_pic1, R.drawable.qqdessert_pic2, R.drawable.qqdessert_pic3, R.drawable.qqdessert_pic4, R.drawable.qqdessert_pic5),
                 address = " Lot 10663 (Ground Floor) Pujut Commercial Centre Jalan Pujut 7,Sungai " +
                         "Merapa, Lutong, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/1gDXEHVpdF9XEyrL8",
@@ -237,7 +240,7 @@ object RestaurantData {
                     "Saturday" to "11 am - 9 pm",
                     "Sunday" to "11 am - 9 pm"
                 ),
-                rating = 4.4f,        // Added this line
+                rating = 4.4f,
                 reviewCount = 80,
                 priceLevel= 1
             ),
@@ -251,7 +254,7 @@ object RestaurantData {
                 categories = listOf("Dessert"),
                 price = "RM1-RM20",
                 mealType = listOf("Lunch","Dinner"),
-                imageGallery = listOf(R.drawable.samicecream_pic1, R.drawable.samicecream_pic2, R.drawable.samicecream_pic3, R.drawable.samicecream_pic4), // insert pictures later
+                imageGallery = listOf(R.drawable.samicecream_pic1, R.drawable.samicecream_pic2, R.drawable.samicecream_pic3, R.drawable.samicecream_pic4),
                 address = "Marina Phase 2, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/5agSPrubEqFeVCkX9",
                 hours =mapOf(
@@ -263,7 +266,7 @@ object RestaurantData {
                     "Saturday" to "9 am - 9 pm",
                     "Sunday" to "9 am - 9 pm"
                 ),
-                rating = 4.7f,        // Added this line
+                rating = 4.7f,
                 reviewCount = 24,
                 priceLevel= 1
             ),
@@ -277,7 +280,7 @@ object RestaurantData {
                 categories = listOf("Asian", "Local", "Chinese"),
                 price = "RM1-RM20",
                 mealType = listOf("Breakfast"),
-                imageGallery = listOf(R.drawable.wangzaidimsum_pic1, R.drawable.wangzaidimsum_pic2, R.drawable.wangzaidimsum_pic3, R.drawable.wangzaidimsum_pic4, R.drawable.wangzaidimsum_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.wangzaidimsum_pic1, R.drawable.wangzaidimsum_pic2, R.drawable.wangzaidimsum_pic3, R.drawable.wangzaidimsum_pic4, R.drawable.wangzaidimsum_pic5),
                 address = "Marina Phase 2, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/sHXokGbcaH65gTzE6",
                 hours =mapOf(
@@ -289,7 +292,7 @@ object RestaurantData {
                     "Saturday" to "6 am - 2 pm",
                     "Sunday" to "6 am - 2 pm"
                 ),
-                rating = 4.0f,        // Added this line
+                rating = 4.0f,
                 reviewCount = 203,
                 priceLevel= 1
             ),
@@ -303,7 +306,7 @@ object RestaurantData {
                 categories = listOf("Asian", "Local", "Chinese"),
                 price = "RM1-RM20",
                 mealType = listOf("Breakfast"),
-                imageGallery = listOf(R.drawable.abuidimsum_pic1, R.drawable.abuidimsum_pic2, R.drawable.abuidimsum_pic3, R.drawable.abuidimsum_pic4, R.drawable.abuidimsum_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.abuidimsum_pic1, R.drawable.abuidimsum_pic2, R.drawable.abuidimsum_pic3, R.drawable.abuidimsum_pic4, R.drawable.abuidimsum_pic5),
                 address = "Lot 2049 Ground Floor, Marina Square, Phase 1, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/aG4SoyXgGDKzXn5j6",
                 hours =mapOf(
@@ -315,7 +318,7 @@ object RestaurantData {
                     "Saturday" to "6 am - 3 pm",
                     "Sunday" to "6 am - 3 pm"
                 ),
-                rating = 4.2f,        // Added this line
+                rating = 4.2f,
                 reviewCount = 43,
                 priceLevel= 1
             ),
@@ -329,7 +332,7 @@ object RestaurantData {
                 categories = listOf("Asian", "Local", "Halal", "Malaysian"),
                 price = "RM1-RM20",
                 mealType = listOf("Breakfast", "Lunch"),
-                imageGallery = listOf(R.drawable.nagaliar_pic1, R.drawable.nagaliar_pic2, R.drawable.nagaliar_pic3, R.drawable.nagaliar_pic4, R.drawable.nagaliar_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.nagaliar_pic1, R.drawable.nagaliar_pic2, R.drawable.nagaliar_pic3, R.drawable.nagaliar_pic4, R.drawable.nagaliar_pic5),
                 address = "Lot 863, Permaisuri, Jalan Helenium, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/k9KJyCpf8CRHogAb9",
                 hours =mapOf(
@@ -341,7 +344,7 @@ object RestaurantData {
                     "Saturday" to "7:15 am - 3:30 pm",
                     "Sunday" to "Closed"
                 ),
-                rating = 4.3f,        // Added this line
+                rating = 4.3f,
                 reviewCount = 492,
                 priceLevel= 1
             ),
@@ -355,7 +358,7 @@ object RestaurantData {
                 categories = listOf("Asian", "Local", "Chinese"),
                 price = "RM1-RM20",
                 mealType = listOf("Breakfast"),
-                imageGallery = listOf(R.drawable.changman_pic1, R.drawable.changman_pic2, R.drawable.changman_pic3, R.drawable.changman_pic4, R.drawable.changman_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.changman_pic1, R.drawable.changman_pic2, R.drawable.changman_pic3, R.drawable.changman_pic4, R.drawable.changman_pic5),
                 address = "Sun City, Centerpoint, Jalan Kubu, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/cP96f1MLPNxVtfSs5",
                 hours =mapOf(
@@ -367,7 +370,7 @@ object RestaurantData {
                     "Saturday" to "6 am - 1:30 pm",
                     "Sunday" to "6 am - 1:30 pm"
                 ),
-                rating = 4.1f,        // Added this line
+                rating = 4.1f,
                 reviewCount = 352,
                 priceLevel= 1
             ),
@@ -381,7 +384,7 @@ object RestaurantData {
                 categories = listOf("Asian", "Chinese", "Halal"),
                 price = "RM1-RM20",
                 mealType = listOf("Breakfast", "Lunch"),
-                imageGallery = listOf(R.drawable.welcomerestaurant_pic1, R.drawable.welcomerestaurant_pic2, R.drawable.welcomerestaurant_pic3, R.drawable.welcomerestaurant_pic4, R.drawable.welcomerestaurant_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.welcomerestaurant_pic1, R.drawable.welcomerestaurant_pic2, R.drawable.welcomerestaurant_pic3, R.drawable.welcomerestaurant_pic4, R.drawable.welcomerestaurant_pic5),
                 address = "12, Miri Times Square, Marina Parkcity, Jalan Bendahara, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/c7rPbHqbRbe5JSZ86",
                 hours =mapOf(
@@ -393,7 +396,7 @@ object RestaurantData {
                     "Saturday" to "7 am - 4:30 pm",
                     "Sunday" to "7 am - 4:30 pm"
                 ),
-                rating = 4.0f,        // Added this line
+                rating = 4.0f,
                 reviewCount = 240,
                 priceLevel= 1
             ),
@@ -407,7 +410,7 @@ object RestaurantData {
                 categories = listOf("Fusion", "Dessert", "Asian", "Halal"),
                 price = "RM20-RM40",
                 mealType = listOf("Breakfast", "Lunch", "Dinner"),
-                imageGallery = listOf(R.drawable.jjbyjen_pic1, R.drawable.jjbyjen_pic2, R.drawable.jjbyjen_pic3, R.drawable.jjbyjen_pic4, R.drawable.jjbyjen_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.jjbyjen_pic1, R.drawable.jjbyjen_pic2, R.drawable.jjbyjen_pic3, R.drawable.jjbyjen_pic4, R.drawable.jjbyjen_pic5),
                 address = "Lot 1984 & 1985, Ground Floor, Marina Phase 2, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/r4JuBQ9fegfp6KBZA",
                 hours =mapOf(
@@ -419,7 +422,7 @@ object RestaurantData {
                     "Saturday" to "10 am - 9 pm",
                     "Sunday" to "10 am - 9 pm"
                 ),
-                rating = 4.2f,        // Added this line
+                rating = 4.2f,
                 reviewCount = 152,
                 priceLevel= 2
             ),
@@ -433,7 +436,7 @@ object RestaurantData {
                 categories = listOf("Chinese","Asian"),
                 price = "RM20-RM40",
                 mealType = listOf("Breakfast","Lunch","Dinner"),
-                imageGallery = listOf(R.drawable.hilltoplittlekitchen_pic1,R.drawable.hilltoplittlekitchen_pic2, R.drawable.hilltoplittlekitchen_pic3, R.drawable.hilltoplittlekitchen_pic4, R.drawable.hilltoplittlekitchen_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.hilltoplittlekitchen_pic1,R.drawable.hilltoplittlekitchen_pic2, R.drawable.hilltoplittlekitchen_pic3, R.drawable.hilltoplittlekitchen_pic4, R.drawable.hilltoplittlekitchen_pic5),
                 address = "Riam, Lot 505, Q290, 98000 Miri",
                 mapsUrl = "https://maps.app.goo.gl/KoWdKLaWo6QtqHVbA",
                 hours =mapOf(
@@ -445,7 +448,7 @@ object RestaurantData {
                     "Saturday" to "6:30 am - 10 pm",
                     "Sunday" to "6:30 am - 10 pm"
                 ),
-                rating = 4.0f,        // Added this line
+                rating = 4.0f,
                 reviewCount = 338,
                 priceLevel= 2
             ),
@@ -459,7 +462,7 @@ object RestaurantData {
                 categories = listOf("Chinese", "Asian"),
                 price = "RM1-RM20",
                 mealType = listOf("Dinner"),
-                imageGallery = listOf(R.drawable.kuehtiaw_pic1, R.drawable.kuehtiaw_pic2, R.drawable.kuehtiaw_pic3, R.drawable.kuehtiaw_pic4), // insert pictures later
+                imageGallery = listOf(R.drawable.kuehtiaw_pic1, R.drawable.kuehtiaw_pic2, R.drawable.kuehtiaw_pic3, R.drawable.kuehtiaw_pic4),
                 address = "5050 Cafe Miri\n" +
                         "604, Jalan Pelita 3, Pelita Commercial Centre, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/dxK1CkmYPzF7ZhAv5",
@@ -472,7 +475,7 @@ object RestaurantData {
                     "Saturday" to "5 pm - 9pm",
                     "Sunday" to "5 pm - 9pm"
                 ),
-                rating = 4.0f,        // Added this line
+                rating = 4.0f,
                 reviewCount = 33,
                 priceLevel= 1
             ),
@@ -486,7 +489,7 @@ object RestaurantData {
                 categories = listOf("Vietnamese", "Asian"),
                 price = "RM20-RM40",
                 mealType = listOf("Dinner"),
-                imageGallery = listOf(R.drawable.saigonreplubicvietnamese_pic1, R.drawable.saigonreplubicvietnamese_pic2, R.drawable.saigonreplubicvietnamese_pic3, R.drawable.saigonreplubicvietnamese_pic4, R.drawable.saigonreplubicvietnamese_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.saigonreplubicvietnamese_pic1, R.drawable.saigonreplubicvietnamese_pic2, R.drawable.saigonreplubicvietnamese_pic3, R.drawable.saigonreplubicvietnamese_pic4, R.drawable.saigonreplubicvietnamese_pic5),
                 address = "Permaisuri, Jalan Merbau, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/UYjAeeZtCJNLeTSv5",
                 hours =mapOf(
@@ -498,7 +501,7 @@ object RestaurantData {
                     "Saturday" to "10:30 am - 9 pm",
                     "Sunday" to "10:30 am - 9 pm",
                 ),
-                rating = 4.5f,   // Added this line
+                rating = 4.5f,
                 reviewCount = 182,
                 priceLevel= 2
             ),
@@ -512,7 +515,7 @@ object RestaurantData {
                 categories = listOf("Japanese", "Fusion"),
                 price = "RM20-RM40",
                 mealType = listOf("Dinner"),
-                imageGallery = listOf(R.drawable.kenny_pic1, R.drawable.kenny_pic2, R.drawable.kenny_pic3, R.drawable.kenny_pic4, R.drawable.kenny_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.kenny_pic1, R.drawable.kenny_pic2, R.drawable.kenny_pic3, R.drawable.kenny_pic4, R.drawable.kenny_pic5),
                 address = "Lot 2133, Off Krokop, 10, Jalan Datuk Edward Jeli, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/C8CNRf55EZ5eA4Es7",
                 hours =mapOf(
@@ -524,7 +527,7 @@ object RestaurantData {
                     "Saturday" to "5 pm - 10 pm",
                     "Sunday" to "5 pm - 10 pm",
                 ),
-                rating = 4.2f,        // Added this line
+                rating = 4.2f,
                 reviewCount = 36,
                 priceLevel= 2
             ),
@@ -538,7 +541,7 @@ object RestaurantData {
                 categories = listOf("Indian", "Halal", "Vegetarian"),
                 price = "RM20-RM40",
                 mealType = listOf("Lunch","Dinner"),
-                imageGallery = listOf(R.drawable.zaikarestaurant_pic1, R.drawable.zaikarestaurant_pic2, R.drawable.zaikarestaurant_pic3, R.drawable.zaikarestaurant_pic4, R.drawable.zaikarestaurant_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.zaikarestaurant_pic1, R.drawable.zaikarestaurant_pic2, R.drawable.zaikarestaurant_pic3, R.drawable.zaikarestaurant_pic4, R.drawable.zaikarestaurant_pic5),
                 address = " Lot 2512, Jalan Miri-Pujut, Boulevard Commercial Centre, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/zUfU7qhDb82B6qzG8",
                 hours =mapOf(
@@ -550,7 +553,7 @@ object RestaurantData {
                     "Saturday" to "11 am - 10 pm",
                     "Sunday" to "11 am - 10 pm"
                 ),
-                rating = 4.4f,        // Added this line
+                rating = 4.4f,
                 reviewCount = 253,
                 priceLevel= 2
             ),
@@ -564,7 +567,7 @@ object RestaurantData {
                 categories = listOf("Malaysian", "Halal", "Asian", "Local"),
                 price = "RM1-RM20",
                 mealType = listOf("Lunch", "Dinner"),
-                imageGallery = listOf(R.drawable.awindnasikukus_pic1, R.drawable.awindnasikukus_pic2, R.drawable.awindnasikukus_pic3, R.drawable.awindnasikukus_pic4, R.drawable.awindnasikukus_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.awindnasikukus_pic1, R.drawable.awindnasikukus_pic2, R.drawable.awindnasikukus_pic3, R.drawable.awindnasikukus_pic4, R.drawable.awindnasikukus_pic5),
                 address = "Bangunan Persatuan Jatti Meirek Miri, Lot 1749, Jln Jee Foh Utama, Krokop, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/9h7YBQ85GqKzDqYa7",
                 hours =mapOf(
@@ -576,7 +579,7 @@ object RestaurantData {
                     "Saturday" to "11 am - 11 pm",
                     "Sunday" to "11 am - 11 pm"
                 ),
-                rating = 4.4f,        // Added this line
+                rating = 4.4f,
                 reviewCount = 382,
                 priceLevel= 1
             ),
@@ -590,7 +593,7 @@ object RestaurantData {
                 categories = listOf("Western", "Fusion", "Grill"),
                 price = "RM40-RM80",
                 mealType = listOf("Breakfast", "Lunch", "Dinner"),
-                imageGallery = listOf(R.drawable.thenest_pic1, R.drawable.thenest_pic2, R.drawable.thenest_pic3, R.drawable.thenest_pic4, R.drawable.thenest_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.thenest_pic1, R.drawable.thenest_pic2, R.drawable.thenest_pic3, R.drawable.thenest_pic4, R.drawable.thenest_pic5),
                 address = "No A-G18, Miri Times Square, Marina Parkcity, 98000, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/vWFjcjvhfEwwe9Mf8",
                 hours =mapOf(
@@ -602,7 +605,7 @@ object RestaurantData {
                     "Saturday" to "9 am - 11 pm",
                     "Sunday" to "9 am - 10 pm"
                 ),
-                rating = 4.8f,        // Added this line
+                rating = 4.8f,
                 reviewCount = 1289,
                 priceLevel= 3
             ),
@@ -616,7 +619,7 @@ object RestaurantData {
                 categories = listOf("Asian", "Grill", "Japanese"),
                 price = "RM200+",
                 mealType = listOf("Dinner"),
-                imageGallery = listOf(R.drawable.yuuhi_pic1, R.drawable.yuuhi_pic2, R.drawable.yuuhi_pic3, R.drawable.yuuhi_pic4, R.drawable.yuuhi_pic5), // insert pictures later
+                imageGallery = listOf(R.drawable.yuuhi_pic1, R.drawable.yuuhi_pic2, R.drawable.yuuhi_pic3, R.drawable.yuuhi_pic4, R.drawable.yuuhi_pic5),
                 address = "Marina, Lot 2022, Phase 1, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/v7zbwQf6zZY7JcQF8",
                 hours =mapOf(
@@ -628,7 +631,7 @@ object RestaurantData {
                     "Saturday" to "11:30 am - 11 pm",
                     "Sunday" to "11:30 am - 11 pm"
                 ),
-                rating = 4.9f,        // Added this line
+                rating = 4.9f,
                 reviewCount = 2400,
                 priceLevel= 4
             ),
@@ -642,7 +645,7 @@ object RestaurantData {
                 categories = listOf("Fusion", "Western", "Asian"),
                 price = "RM20-RM40",
                 mealType = listOf("Lunch", "Dinner"),
-                imageGallery = listOf(R.drawable.hage_pic1, R.drawable.hage_pic2, R.drawable.hage_pic3, R.drawable.hage_pic4, R.drawable.hage_pic5, R.drawable.hage_pic6), // insert pictures later
+                imageGallery = listOf(R.drawable.hage_pic1, R.drawable.hage_pic2, R.drawable.hage_pic3, R.drawable.hage_pic4, R.drawable.hage_pic5, R.drawable.hage_pic6),
                 address = "Lot 11584 Block 5 Kuala Baram Land District, Jln Desa Senadin, Phase 8, Desa Senadin Commercial Centre, 98000 Miri, Sarawak",
                 mapsUrl = "https://maps.app.goo.gl/CfVSxRMszoit8RoK8",
                 hours =mapOf(
@@ -654,7 +657,7 @@ object RestaurantData {
                     "Saturday" to "11 am - 10 pm",
                     "Sunday" to "11 am - 10 pm"
                 ),
-                rating = 4.9f,        // Added this line
+                rating = 4.9f,
                 reviewCount = 16,
                 priceLevel= 2
             )

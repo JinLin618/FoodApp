@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 /* This class use to handle the data which will be display in the recycler view */
 class RestaurantAdapter(
     private var restaurants: List<Restaurant>, //store the list of restaurants
-    private val onItemClick: (Restaurant) -> Unit, //
+    private val onItemClick: (Restaurant) -> Unit, //takes a Restaurant parameter and returns nothing
     private val onFavoriteClick: (Restaurant, Int) -> Unit
 ) : RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>() {
 
@@ -33,6 +33,7 @@ class RestaurantAdapter(
         return RestaurantViewHolder(view)
     }
 
+    // bind/show the data onto the item_restaurant view (layout)
     override fun onBindViewHolder(holder: RestaurantViewHolder, position: Int) {
         val restaurant = restaurants[position]
 
@@ -65,18 +66,22 @@ class RestaurantAdapter(
             onItemClick(restaurant)
         }
 
-        // when clicked on the specific restaurant's favourite icon, it will handle favourite state of the restaurant
+        // when clicked on the specific restaurant's favourite icon,
+        // it will handle favourite state of the restaurant,
+        // also passes the position index of this restaurant
         holder.bookmarkIcon.setOnClickListener {
             onFavoriteClick(restaurant, position)
         }
     }
 
-    override fun getItemCount() = restaurants.size //to get the total number of restaurants
+    //to get the total number of restaurants,
+    // to keep track of the number of restaurants in the list
+    override fun getItemCount() = restaurants.size
 
     // Method to update the restaurant list (for search/filter)
     fun updateRestaurants(newRestaurants: List<Restaurant>) {
         restaurants = newRestaurants
-        notifyDataSetChanged()
+        notifyDataSetChanged() //this will tell the recyclerView to refresh the the list
     }
 
     // Method to toggle favorite status, add/remove restaurant from the favourite list
@@ -86,12 +91,14 @@ class RestaurantAdapter(
         } else {
             favoriteRestaurants.add(restaurantTitle)
         }
+        // Tells the recyclerView that the item at this specified index has changed,
+        // Refresh this particular index
         notifyItemChanged(position)
     }
 
     // Method to get all the favorite restaurants
     fun getFavoriteRestaurants(): Set<String> {
-        return favoriteRestaurants.toSet()
+        return favoriteRestaurants.toSet() //using set to ensure no duplicate restaurants
     }
 
     // Method to set favorite restaurants (for state persistence)

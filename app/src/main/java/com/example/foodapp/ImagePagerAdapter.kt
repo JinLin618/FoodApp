@@ -15,8 +15,8 @@ import androidx.recyclerview.widget.RecyclerView
  *   viewPager.adapter = adapter
  */
 class ImagePagerAdapter(
-    private var images: List<Int>,
-    private val onImageClick: ((position: Int) -> Unit)? = null
+    private var images: List<Int>, //store the drawable's ID
+    private val onImageClick: ((position: Int) -> Unit)? = null // passes the position of the clicked image
 ) : RecyclerView.Adapter<ImagePagerAdapter.ImageVH>() {
 
     class ImageVH(itemView: View) : RecyclerView.ViewHolder(itemView) {

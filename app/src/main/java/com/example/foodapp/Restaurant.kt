@@ -3,6 +3,7 @@ package com.example.foodapp
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
+// Creating a parcel storing all the attributes of a restaurant
 @Parcelize
 data class Restaurant(
     val title: String,

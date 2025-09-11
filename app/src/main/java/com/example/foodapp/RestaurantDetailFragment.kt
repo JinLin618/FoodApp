@@ -39,9 +39,9 @@ class  RestaurantDetailFragment : Fragment(R.layout.activity_restaurant_desc_pag
 
         // 2) get Restaurant argument that was passed during navigation
         restaurant = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            requireArguments().getParcelable(ARG_RESTAURANT, Restaurant::class.java)!!
+            requireArguments().getParcelable(ARG_RESTAURANT, Restaurant::class.java)!! //for newer version of Android studio
         } else {
-            @Suppress("DEPRECATION")
+            @Suppress("DEPRECATION") //for older version of Android studio
             requireArguments().getParcelable<Restaurant>(ARG_RESTAURANT)!!
         }
 
@@ -80,11 +80,14 @@ class  RestaurantDetailFragment : Fragment(R.layout.activity_restaurant_desc_pag
         mapLink.paintFlags = mapLink.paintFlags or Paint.UNDERLINE_TEXT_FLAG
         mapLink.setOnClickListener {
             val url = restaurant.mapsUrl
+
+            // creates an intent to tell Android to visit the specified map url link
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
-                setPackage("com.google.android.apps.maps")
+                setPackage("com.google.android.apps.maps")// forces the app to open Google Map, when the map url is clicked
             }
             try { startActivity(intent) }
             catch(_: ActivityNotFoundException) {
+                //if google map cannot be opened, Android ask which app to open map url link
                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
             }
         }

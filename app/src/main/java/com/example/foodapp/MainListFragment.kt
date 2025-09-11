@@ -132,7 +132,6 @@ class MainListFragment : Fragment(R.layout.activity_main_screen) {
         // Tapping this toggles the "show only favourites" mode and triggers a recomputation of the list.
         favouritesButton.setOnClickListener {
             viewModel.showFavoritesOnly()
-            favoriteBtnIcon
         }
 
         // Each filter card opens a dialog and updates the ViewModel with the selected value.
